@@ -22,7 +22,11 @@
         </activity>
         <activity
             android:name=".ui.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login" />
+
+        <activity
+            android:name=".ui.RegisterActivity"
+            android:label="@string/title_activity_register" />
     </application>
 
 </manifest>
