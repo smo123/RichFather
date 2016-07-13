@@ -1,0 +1,14 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout style="@style/topbar_layout_style">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/topbar_text_style"
+            android:text="@string/title_fragment_me" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

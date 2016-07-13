@@ -4,20 +4,12 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/titlebar_bg">
+    <RelativeLayout style="@style/topbar_layout_style">
 
         <TextView
             android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
-            android:text="@string/title_activity_login"
-            android:textColor="@color/white"
-            android:textSize="@dimen/activity_title_text_size" />
+            style="@style/topbar_text_style"
+            android:text="@string/title_activity_login" />
 
         <Button
             android:id="@+id/btn_register"
@@ -69,9 +61,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_password"
-                    android:imeActionId="@+id/login"
-                    android:imeActionLabel="@string/action_sign_in_short"
-                    android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:singleLine="true" />
