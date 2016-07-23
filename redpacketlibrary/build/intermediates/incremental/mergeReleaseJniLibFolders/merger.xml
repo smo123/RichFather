@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\Android\workspace\RichFather\redpacketlibrary\libs"><file name="alipaySdk-20160516.jar" path="D:\Android\workspace\RichFather\redpacketlibrary\libs\alipaySdk-20160516.jar"/><file name="redpacket-3.0.1.jar" path="D:\Android\workspace\RichFather\redpacketlibrary\libs\redpacket-3.0.1.jar"/></source></dataSet><dataSet config="release"><source path="D:\Android\workspace\RichFather\redpacketlibrary\build-types\release\jniLibs"/></dataSet></merger>
