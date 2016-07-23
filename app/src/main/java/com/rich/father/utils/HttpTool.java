@@ -36,13 +36,14 @@ public class HttpTool {
         return result;
     }
 
-    /**Post请求*/
-    public static String httpPost(Context context, String url, String key, String value){
+    /**登陆*/
+    public static String httpPostLogin(Context context, String url, String name, String password){
         String result = null;
         if(isNetworkConnected(context)){
             OkHttpClient client = new OkHttpClient();
             RequestBody body = new FormBody.Builder()
-                    .add(key, value)
+                    .add("name", name)
+                    .add("password", password)
                     .build();
             Request request = new Request.Builder()
                     .addHeader("Accept", "application/json")

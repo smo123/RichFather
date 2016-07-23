@@ -10,7 +10,19 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true//保证5.0以下的机器也能运行
     }
+
+    dexOptions {
+        preDexLibraries = false //delete the already predexed libraries
+    }
+
+    sourceSets{
+        main{
+            jniLibs.srcDirs = ['libs']//jni库的调用会到资源文件夹下libs里面找so文件
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -20,10 +32,12 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
     compile 'com.squareup.okhttp3:okhttp:3.2.0'
     compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:multidex:1.0.0'//保证5.0以下的机器也能运行
+    compile files('libs/hyphenatechat_3.1.4.jar')
 }

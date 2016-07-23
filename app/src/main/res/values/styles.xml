@@ -15,7 +15,7 @@
         <item name="android:layout_centerInParent">true</item>
         <item name="android:layout_weight">1</item>
         <item name="android:textColor">@drawable/menu_text_bg</item>
-        <item name="android:textSize">13sp</item>
+        <item name="android:textSize">10sp</item>
         <item name="android:gravity">center</item>
     </style>
 

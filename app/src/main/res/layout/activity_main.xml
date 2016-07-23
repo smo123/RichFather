@@ -10,7 +10,15 @@
 
     </FrameLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/layout_menu"
+        android:layout_marginBottom="5dp"
+        android:background="@color/main_style_normal_color" />
+
     <LinearLayout
+        android:id="@+id/layout_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

@@ -1,6 +1,5 @@
 package com.rich.father.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -12,6 +11,15 @@ import com.rich.father.R;
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private static final String TAG = MainActivity.class.getName();
+
+    //red packet code : 红包功能使用的常量
+    private static final int MESSAGE_TYPE_RECV_RED_PACKET = 5;
+    private static final int MESSAGE_TYPE_SEND_RED_PACKET = 6;
+    private static final int MESSAGE_TYPE_SEND_RED_PACKET_ACK = 7;
+    private static final int MESSAGE_TYPE_RECV_RED_PACKET_ACK = 8;
+    private static final int REQUEST_CODE_SEND_RED_PACKET = 16;
+    private static final int ITEM_RED_PACKET = 16;
+    //end of red packet code
 
     private TextView tvMenuHome, tvMenuFriend, tvMenuMe;
 
@@ -28,15 +36,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         tvMenuHome.setOnClickListener(this);
         tvMenuFriend.setOnClickListener(this);
         tvMenuMe.setOnClickListener(this);
-        tvMenuHome.setSelected(true);
 
         fragmentManager = getSupportFragmentManager();//Fragment管理器
 
-        if(false){
-            Intent intent = new Intent();
-            intent.setClass(this, LoginActivity.class);
-            startActivity(intent);
-        }
+        //默认启动
+        tvMenuHome.setSelected(true);
+        FirstFragment firstFragment = FirstFragment.newInstance("", "");
+        transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.layout_main_content, firstFragment);
+        transaction.commit();
 
     }
 
