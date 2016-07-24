@@ -2,18 +2,29 @@ package com.rich.father.ui;
 
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.easemob.redpacketui.utils.RedPacketUtil;
+import com.hyphenate.easeui.ui.EaseChatFragment;
 import com.rich.father.R;
+import com.rich.father.app.App;
 
-public class ThirdFragment extends BaseFragment {
+public class ThirdFragment extends EaseChatFragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    //red packet code : 红包功能使用的常量
+    private static final int MESSAGE_TYPE_RECV_RED_PACKET = 5;
+    private static final int MESSAGE_TYPE_SEND_RED_PACKET = 6;
+    private static final int MESSAGE_TYPE_SEND_RED_PACKET_ACK = 7;
+    private static final int MESSAGE_TYPE_RECV_RED_PACKET_ACK = 8;
+    private static final int REQUEST_CODE_SEND_RED_PACKET = 16;
+    private static final int ITEM_RED_PACKET = 16;
+    //end of red packet code
 
     private Activity activity;
 
@@ -45,9 +56,12 @@ public class ThirdFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.fragment_third, container, false);
 
         if(true){
-            Intent intent = new Intent();
+            /*Intent intent = new Intent();
             intent.setClass(activity, LoginActivity.class);
-            startActivity(intent);
+            startActiity(intent);*/
+            App.log(TAG, "-----chatType----->"+chatType+"------toChatUsername----->"+toChatUsername);
+            //RedPacketUtil.startRedPacketActivityForResult(this, chatType, "smo2", REQUEST_CODE_SEND_RED_PACKET);
+            RedPacketUtil.startChangeActivity(getActivity());
         }
 
         return view;

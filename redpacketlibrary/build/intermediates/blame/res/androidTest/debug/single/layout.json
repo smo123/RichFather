@@ -348,12 +348,12 @@
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_choose_pay_dialog.xml"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_activity_red_packet_detail.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_activity_red_packet_detail.xml"
-    },
-    {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_file.xml",
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\layout\\ease_row_received_file.xml"
+    },
+    {
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_activity_red_packet_detail.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_activity_red_packet_detail.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_choose_record_popup_layout.xml",

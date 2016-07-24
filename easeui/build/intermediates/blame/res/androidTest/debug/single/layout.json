@@ -8,12 +8,12 @@
         "source": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_fragment_chat.xml"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_voice_recorder.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_voice_recorder.xml"
-    },
-    {
         "merged": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_picture.xml",
         "source": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_picture.xml"
+    },
+    {
+        "merged": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_widget_voice_recorder.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_widget_voice_recorder.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_fragment_conversation_list.xml",
@@ -36,16 +36,16 @@
         "source": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_voice_call.xml"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_contact.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_contact.xml"
+        "merged": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_layout_emojicon_menu.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_layout_emojicon_menu.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_chat_history.xml",
         "source": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_chat_history.xml"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_layout_emojicon_menu.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_layout_emojicon_menu.xml"
+        "merged": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_contact.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_contact.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_video_call.xml",
@@ -188,11 +188,11 @@
         "source": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_search_bar.xml"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_layout_chat_primary_menu.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_layout_chat_primary_menu.xml"
-    },
-    {
         "merged": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_received_video.xml",
         "source": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_row_received_video.xml"
+    },
+    {
+        "merged": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_layout_chat_primary_menu.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\bundles\\debug\\res\\layout\\ease_layout_chat_primary_menu.xml"
     }
 ]

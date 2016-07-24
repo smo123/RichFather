@@ -172,32 +172,32 @@
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\layout\\rp_textview.xml"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\layout\\ease_layout_chat_primary_menu.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\layout\\ease_layout_chat_primary_menu.xml"
-    },
-    {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\layout\\ease_search_bar_with_padding.xml",
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\layout\\ease_search_bar_with_padding.xml"
+    },
+    {
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\layout\\ease_layout_chat_primary_menu.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\layout\\ease_layout_chat_primary_menu.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\layout\\rp_choose_record_popup_layout.xml",
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\layout\\rp_choose_record_popup_layout.xml"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\layout\\ease_widget_chat_primary_menu.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\layout\\ease_widget_chat_primary_menu.xml"
-    },
-    {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\layout\\rp_card_list_item.xml",
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\layout\\rp_card_list_item.xml"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\layout\\rp_activity_red_packet_detail.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\layout\\rp_activity_red_packet_detail.xml"
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\layout\\ease_widget_chat_primary_menu.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\layout\\ease_widget_chat_primary_menu.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\layout\\rp_fragment_group_packet_detail.xml",
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\layout\\rp_fragment_group_packet_detail.xml"
+    },
+    {
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\layout\\rp_activity_red_packet_detail.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\layout\\rp_activity_red_packet_detail.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\layout\\em_row_received_red_packet.xml",

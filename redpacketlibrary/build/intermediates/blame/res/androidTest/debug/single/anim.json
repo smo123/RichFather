@@ -48,12 +48,12 @@
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\anim\\rp_scale_in.xml"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\head_out.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\anim\\head_out.xml"
-    },
-    {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\slide_in_from_right.xml",
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\anim\\slide_in_from_right.xml"
+    },
+    {
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\head_out.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\anim\\head_out.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim\\fade_out.xml",

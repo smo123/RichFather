@@ -228,12 +228,12 @@
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\layout\\ease_widget_emojicon_tab_bar.xml"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\layout\\ease_widget_voice_recorder.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\layout\\ease_widget_voice_recorder.xml"
-    },
-    {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\layout\\rp_choose_pay_dialog.xml",
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\layout\\rp_choose_pay_dialog.xml"
+    },
+    {
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\layout\\ease_widget_voice_recorder.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\layout\\ease_widget_voice_recorder.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\layout\\rp_fragment_group_chat_packet.xml",
