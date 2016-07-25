@@ -36,14 +36,46 @@ public class HttpTool {
         return result;
     }
 
+    /**注册*/
+    public static String httpPostRegister(Context context, String url, String name, String password, String phone, String wechat, String qq, String inviteCode){
+        String result = null;
+        if(isNetworkConnected(context)){
+            OkHttpClient client = new OkHttpClient();
+            RequestBody body = new FormBody.Builder()
+                    .add("user_name", name)
+                    .add("user_password", password)
+                    .add("user_phone", phone)
+                    .add("user_wechat", wechat)
+                    .add("user_qq", qq)
+                    .add("user_spuer", inviteCode)
+                    .build();
+            Request request = new Request.Builder()
+                    .addHeader("Accept", "application/json")
+                    .url(url)
+                    .post(body)
+                    .build();
+            try {
+                Response response = client.newCall(request).execute();
+                if(response.code()==200){
+                    result = response.body().string();
+                }else {
+                    result = null;
+                }
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
+
     /**登陆*/
     public static String httpPostLogin(Context context, String url, String name, String password){
         String result = null;
         if(isNetworkConnected(context)){
             OkHttpClient client = new OkHttpClient();
             RequestBody body = new FormBody.Builder()
-                    .add("name", name)
-                    .add("password", password)
+                    .add("user_phone", name)
+                    .add("user_password", password)
                     .build();
             Request request = new Request.Builder()
                     .addHeader("Accept", "application/json")

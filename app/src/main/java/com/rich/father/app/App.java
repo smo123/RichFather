@@ -19,6 +19,7 @@ public class App extends Application{
     public static final String TAG = App.class.getName();
     public static final boolean DEBUG = true;//是否允许debug输出
 
+    public static final String REGISTER = "http://feigou.ecs31.tomcats.pw/RichDad/user/regist.do";
     public static final String LOGIN = "http://feigou.ecs31.tomcats.pw/RichDad/user/login.do";
 
     //本方法保证在5.0以下的机器也能够运行，不要移除
@@ -39,6 +40,13 @@ public class App extends Application{
         EMClient.getInstance().setDebugMode(true);//在做打包混淆时，关闭debug模式，避免消耗不必要的资源
         RedPacket.getInstance().initContext(this);//初始化红包
         RedPacket.getInstance().setDebugMode(true);//打开Log开关 正式发布时请关闭
+    }
+
+    //注册
+    public static String register(Context context, String url, String name, String password, String phone, String wechat, String qq, String inviteCode){
+        String result = null;
+        result = HttpTool.httpPostRegister(context, url, name, password, phone, wechat, qq, inviteCode);
+        return result;
     }
 
     //登录

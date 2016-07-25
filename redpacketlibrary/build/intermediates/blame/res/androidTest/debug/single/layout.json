@@ -44,12 +44,12 @@
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\layout\\ease_emojicon.xml"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_details_list_footer.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_details_list_footer.xml"
-    },
-    {
         "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_send_record_list_item.xml",
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_send_record_list_item.xml"
+    },
+    {
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_details_list_footer.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_details_list_footer.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\ease_row_sent_voice_call.xml",
@@ -164,12 +164,12 @@
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_record_list_footer.xml"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_loading.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_loading.xml"
-    },
-    {
         "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_activity_bind_bankcard.xml",
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_activity_bind_bankcard.xml"
+    },
+    {
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_loading.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_loading.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\em_row_sent_red_packet.xml",
@@ -272,12 +272,12 @@
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_fragment_red_packet_detail.xml"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_activity_red_packet.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_activity_red_packet.xml"
-    },
-    {
         "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_group_member_item.xml",
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_group_member_item.xml"
+    },
+    {
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_activity_red_packet.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\layout\\rp_activity_red_packet.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\rp_fragment_verify_dentity.xml",

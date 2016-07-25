@@ -2,12 +2,10 @@ package com.rich.father.ui;
 
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 import com.rich.father.R;
 import com.rich.father.utils.HttpAsyncTask;
@@ -37,7 +35,7 @@ public class FirstFragment extends BaseFragment implements HttpAsyncTask.IHttpAs
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-        HttpAsyncTask.getInstance(this);
+        //HttpAsyncTask.getInstance(this);
 
     }
 
@@ -54,32 +52,6 @@ public class FirstFragment extends BaseFragment implements HttpAsyncTask.IHttpAs
 
     @Override
     public Object doInBackground(Object... params) {
-        /*try {
-            //注册失败会抛出HyphenateException
-            EMClient.getInstance().createAccount("smo2","868688");//同步方法
-        }catch (Exception e){
-
-        }*/
-
-        EMClient.getInstance().login("smo2","868688",new EMCallBack() {//回调
-            @Override
-            public void onSuccess() {
-                EMClient.getInstance().groupManager().loadAllGroups();
-                EMClient.getInstance().chatManager().loadAllConversations();
-                Log.d("main", "登录聊天服务器成功！");
-            }
-
-            @Override
-            public void onProgress(int progress, String status) {
-
-            }
-
-            @Override
-            public void onError(int code, String message) {
-                Log.d("main", "登录聊天服务器失败！");
-            }
-        });
-
         return null;
     }
 

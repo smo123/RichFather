@@ -1,11 +1,11 @@
 [
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\anim\\rp_bottom_in.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\anim\\rp_bottom_in.xml"
-    },
-    {
         "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\anim\\rp_fade_in.xml",
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\anim\\rp_fade_in.xml"
+    },
+    {
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\anim\\rp_bottom_in.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\anim\\rp_bottom_in.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\anim\\rp_left_in.xml",
@@ -16,12 +16,12 @@
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\anim\\voice_from_icon.xml"
     },
     {
-        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\anim\\fade_out.xml",
-        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\anim\\fade_out.xml"
-    },
-    {
         "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\anim\\slide_in_from_right.xml",
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\anim\\slide_in_from_right.xml"
+    },
+    {
+        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\anim\\fade_out.xml",
+        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\anim\\fade_out.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\anim\\rp_right_in.xml",

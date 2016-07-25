@@ -60,12 +60,12 @@
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_picture_flash_strong.png"
     },
     {
-        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_pass_authentication.png",
-        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_pass_authentication.png"
-    },
-    {
         "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_packet_detail_bg.png",
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_packet_detail_bg.png"
+    },
+    {
+        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_pass_authentication.png",
+        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_pass_authentication.png"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\rp_load_dark_7.png",

@@ -1,5 +1,6 @@
 package com.rich.father.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -31,12 +32,18 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         fragmentManager = getSupportFragmentManager();//Fragment管理器
 
         //默认启动
-        tvMenuHome.setSelected(true);
-        FirstFragment firstFragment = FirstFragment.newInstance("", "");
-        transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.layout_main_content, firstFragment);
-        transaction.commit();
-
+        if(!true){
+            tvMenuHome.setSelected(true);
+            FirstFragment firstFragment = FirstFragment.newInstance("", "");
+            transaction = fragmentManager.beginTransaction();
+            transaction.replace(R.id.layout_main_content, firstFragment);
+            transaction.commit();
+        }else {
+            Intent intent = new Intent();
+            intent.setClass(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
     @Override
