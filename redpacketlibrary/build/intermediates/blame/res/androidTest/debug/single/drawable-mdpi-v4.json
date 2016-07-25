@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\drawable-mdpi-v4\\ic_launcher.png"
+    },
+    {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_launcher.png",
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\drawable-mdpi-v4\\ic_launcher.png"
     }

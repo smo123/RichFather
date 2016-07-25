@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.easemob.redpacketsdk.constant.RPConstant;
 import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.hyphenate.easeui.ui.EaseChatFragment;
 import com.rich.father.R;
@@ -59,9 +60,9 @@ public class ThirdFragment extends EaseChatFragment {
             /*Intent intent = new Intent();
             intent.setClass(activity, LoginActivity.class);
             startActiity(intent);*/
-            App.log(TAG, "-----chatType----->"+chatType+"------toChatUsername----->"+toChatUsername);
-            //RedPacketUtil.startRedPacketActivityForResult(this, chatType, "smo2", REQUEST_CODE_SEND_RED_PACKET);
-            RedPacketUtil.startChangeActivity(getActivity());
+            App.log(TAG, "-----chatType----->" + chatType + "------toChatUsername----->" + toChatUsername);
+            RedPacketUtil.startRedPacketActivityForResult(this, RPConstant.CHATTYPE_SINGLE, "smo2", REQUEST_CODE_SEND_RED_PACKET);
+            //RedPacketUtil.startChangeActivity(getActivity());
         }
 
         return view;

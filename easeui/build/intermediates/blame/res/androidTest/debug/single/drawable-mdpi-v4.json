@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\smo\\github_repositories\\RichFather\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_launcher.png",
+        "source": "D:\\smo\\github_repositories\\RichFather\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_launcher.png"
+    },
+    {
         "merged": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4\\ic_launcher.png",
         "source": "D:\\Android\\workspace\\RichFather\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-mdpi-v4\\ic_launcher.png"
     }
