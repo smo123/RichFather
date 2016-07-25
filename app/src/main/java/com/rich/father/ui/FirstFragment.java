@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.hyphenate.chat.EMClient;
 import com.rich.father.R;
 import com.rich.father.utils.HttpAsyncTask;
 
