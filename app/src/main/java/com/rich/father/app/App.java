@@ -19,8 +19,11 @@ public class App extends Application{
     public static final String TAG = App.class.getName();
     public static final boolean DEBUG = true;//是否允许debug输出
 
-    public static final String REGISTER = "http://feigou.ecs31.tomcats.pw/RichDad/user/regist.do";
-    public static final String LOGIN = "http://feigou.ecs31.tomcats.pw/RichDad/user/login.do";
+    //private static final String BASE_URL = "http://feigou.ecs31.tomcats.pw/";//正式环境
+    private static final String BASE_URL = "http://192.168.1.109:8080/";//测试环境
+
+    public static final String REGISTER = BASE_URL+"RichDad/user/regist.do";
+    public static final String LOGIN = BASE_URL+"RichDad/user/login.do";
 
     //本方法保证在5.0以下的机器也能够运行，不要移除
     @Override
@@ -46,6 +49,7 @@ public class App extends Application{
     public static String register(Context context, String url, String name, String password, String phone, String wechat, String qq, String inviteCode){
         String result = null;
         result = HttpTool.httpPostRegister(context, url, name, password, phone, wechat, qq, inviteCode);
+        App.log(TAG, "--------------registerResult--------2222------->"+result);
         return result;
     }
 
@@ -77,6 +81,11 @@ public class App extends Application{
         if(DEBUG&&tag != null&&info != null){
             Log.d(tag, info);
         }
+    }
+
+    /**显示toast提示*/
+    public static void toast(Context context, String msg){
+        //Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
     }
 
 }

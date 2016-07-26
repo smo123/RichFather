@@ -4,6 +4,8 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+import com.rich.father.app.App;
+
 import java.io.IOException;
 
 import okhttp3.FormBody;
@@ -47,15 +49,16 @@ public class HttpTool {
                     .add("user_phone", phone)
                     .add("user_wechat", wechat)
                     .add("user_qq", qq)
-                    .add("user_spuer", inviteCode)
+                    .add("user_own", inviteCode)
                     .build();
             Request request = new Request.Builder()
-                    .addHeader("Accept", "application/json")
+                    //.addHeader("Accept", "application/json")
                     .url(url)
                     .post(body)
                     .build();
             try {
                 Response response = client.newCall(request).execute();
+                App.log(TAG, "--------------registerResult--------3333------->" + response.code());
                 if(response.code()==200){
                     result = response.body().string();
                 }else {

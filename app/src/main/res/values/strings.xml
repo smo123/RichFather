@@ -19,4 +19,6 @@
     <string name="menu_home">首页</string>
     <string name="menu_friend">好友</string>
     <string name="menu_me">我的</string>
+
+    <string name="password_length_err">密码长度不能低于6位数</string>
 </resources>

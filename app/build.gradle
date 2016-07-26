@@ -47,4 +47,5 @@ dependencies {
     compile 'com.android.support:multidex:1.0.0'
     //红包
     compile project(':redpacketlibrary')
+    compile files('libs/gson-2.2.2.jar')
 }

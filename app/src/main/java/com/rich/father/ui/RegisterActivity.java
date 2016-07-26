@@ -23,6 +23,13 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     private ImageButton btnBack;
     private Button btnRegister;
 
+    private String uerName;
+    private String password, confirmPassword;
+    private String phone;
+    private String wechat;
+    private String qq;
+    private String inviteCode;
+
     private String registerResult;
 
     @Override
@@ -56,6 +63,24 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         }
     }
 
+    //验证参数合法性
+    private void checkParams(){
+        uerName = tvUserName.getText()+"";
+        password = editPassword.getText()+"";
+        confirmPassword = editConfirmPassword.getText()+"";
+        phone = editPhoneNumber.getText()+"";
+        wechat = editWeChat.getText()+"";
+        qq = editQQ.getText()+"";
+        inviteCode = editInviteCode.getText()+"";
+        if(password.length()<6){
+            App.toast(this, getResources().getString(R.string.password_length_err));
+        }
+        if(!password.equalsIgnoreCase(confirmPassword)){
+            App.toast(this, getResources().getString(R.string.group_id));
+        }
+
+    }
+
     @Override
     public void onPreExecute() {
 
@@ -63,12 +88,6 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
 
     @Override
     public Object doInBackground(Object... params) {
-        String uerName = tvUserName.getText()+"";
-        String password = editPassword.getText()+"";
-        String phone = editPhoneNumber.getText()+"";
-        String wechat = editWeChat.getText()+"";
-        String qq = editQQ.getText()+"";
-        String inviteCode = editInviteCode.getText()+"";
         requireType = (Integer)params[0];
         switch (requireType) {
             case REQUIRE_TYPE_REGISTER:
@@ -78,7 +97,9 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                 }catch (Exception e){
 
                 }
+                checkParams();
                 registerResult = App.register(RegisterActivity.this, App.REGISTER, uerName, password, phone, wechat, qq, inviteCode);
+                App.log(TAG, "--------------registerResult--------111------->"+registerResult);
                 break;
         }
         return null;
