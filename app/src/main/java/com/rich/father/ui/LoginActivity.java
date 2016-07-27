@@ -26,6 +26,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
     private EditText editPassword;
     private Button btnLogin, btnRegister;
 
+    private String password;
+    private String phone;
+
     private String loginResult;
 
     @Override
@@ -46,7 +49,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_login:
-                HttpAsyncTask.getInstance(this, REQUIRE_TYPE_LOGIN_HX);//登陆
+                if(checkParams()){
+                    HttpAsyncTask.getInstance(this, REQUIRE_TYPE_LOGIN_HX);//登陆
+                }
                 break;
             case R.id.btn_register:
                 Intent intent = new Intent();
@@ -54,6 +59,21 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
                 startActivity(intent);
                 break;
         }
+    }
+
+    //验证参数合法性
+    private boolean checkParams(){
+        phone = tvUserName.getText()+"";
+        password = editPassword.getText()+"";
+        if (!App.isMobileNO(phone)){
+            App.toast(this, getResources().getString(R.string.password_phone_err));
+            return false;
+        }
+        if(password.length()<6){
+            App.toast(this, getResources().getString(R.string.password_length_err));
+            return false;
+        }
+        return true;
     }
 
     @Override

@@ -20,5 +20,11 @@
     <string name="menu_friend">好友</string>
     <string name="menu_me">我的</string>
 
+    <string name="password_username_err">用户名不正确</string>
     <string name="password_length_err">密码长度不能低于6位数</string>
+    <string name="password_match_err">两次密码输入不一致</string>
+    <string name="password_phone_err">手机号码不正确</string>
+    <string name="password_wechat_err">微信号码不正确</string>
+    <string name="password_qq_err">QQ号码不正确</string>
+    <string name="password_invitecode_err">验证码不正确</string>
 </resources>

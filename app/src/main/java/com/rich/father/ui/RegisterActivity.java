@@ -2,6 +2,7 @@ package com.rich.father.ui;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -58,13 +59,15 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                 finish();
                 break;
             case R.id.btn_register:
-                HttpAsyncTask.getInstance(this, REQUIRE_TYPE_REGISTER);
+                if(checkParams()){
+                    HttpAsyncTask.getInstance(this, REQUIRE_TYPE_REGISTER);
+                }
                 break;
         }
     }
 
     //验证参数合法性
-    private void checkParams(){
+    private boolean checkParams(){
         uerName = tvUserName.getText()+"";
         password = editPassword.getText()+"";
         confirmPassword = editConfirmPassword.getText()+"";
@@ -72,13 +75,35 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         wechat = editWeChat.getText()+"";
         qq = editQQ.getText()+"";
         inviteCode = editInviteCode.getText()+"";
+        if(uerName.length()<2){
+            App.toast(this, getResources().getString(R.string.password_username_err));
+            return false;
+        }
         if(password.length()<6){
             App.toast(this, getResources().getString(R.string.password_length_err));
+            return false;
         }
         if(!password.equalsIgnoreCase(confirmPassword)){
-            App.toast(this, getResources().getString(R.string.group_id));
+            App.toast(this, getResources().getString(R.string.password_match_err));
+            return false;
         }
-
+        if (!App.isMobileNO(phone)){
+            App.toast(this, getResources().getString(R.string.password_phone_err));
+            return false;
+        }
+        if(wechat.length()<2){
+            App.toast(this, getResources().getString(R.string.password_wechat_err));
+            return false;
+        }
+        if(qq.length()<2){
+            App.toast(this, getResources().getString(R.string.password_qq_err));
+            return false;
+        }
+        if(inviteCode.length()<6||TextUtils.isEmpty(inviteCode)){
+            App.toast(this, getResources().getString(R.string.password_invitecode_err));
+            return false;
+        }
+        return true;
     }
 
     @Override
@@ -95,9 +120,8 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                     //注册失败会抛出HyphenateException
                     EMClient.getInstance().createAccount(uerName, password);//同步方法
                 }catch (Exception e){
-
+                    e.printStackTrace();
                 }
-                checkParams();
                 registerResult = App.register(RegisterActivity.this, App.REGISTER, uerName, password, phone, wechat, qq, inviteCode);
                 App.log(TAG, "--------------registerResult--------111------->"+registerResult);
                 break;

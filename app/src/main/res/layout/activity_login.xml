@@ -47,6 +47,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_phone"
                     android:inputType="phone"
+                    android:maxLength="11"
                     android:maxLines="1"
                     android:singleLine="true" />
 
@@ -62,6 +63,7 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_password"
                     android:inputType="textPassword"
+                    android:maxLength="20"
                     android:maxLines="1"
                     android:singleLine="true" />
 
