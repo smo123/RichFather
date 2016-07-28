@@ -32,12 +32,12 @@
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable\\rp_btn_white_normal_shape.xml"
     },
     {
-        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\ease_btn_cancel_pressed_shape.xml",
-        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\drawable\\ease_btn_cancel_pressed_shape.xml"
-    },
-    {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\ease_common_tab_bg.xml",
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\drawable\\ease_common_tab_bg.xml"
+    },
+    {
+        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\ease_btn_cancel_pressed_shape.xml",
+        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\drawable\\ease_btn_cancel_pressed_shape.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\ease_chat_location_selector.xml",
@@ -60,12 +60,12 @@
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable\\rp_btn_white_selector.xml"
     },
     {
-        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\rp_btn_open_pressed_shape_unsolid.xml",
-        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable\\rp_btn_open_pressed_shape_unsolid.xml"
-    },
-    {
         "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\ease_chatting_setmode_keyboard_btn.xml",
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\drawable\\ease_chatting_setmode_keyboard_btn.xml"
+    },
+    {
+        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\rp_btn_open_pressed_shape_unsolid.xml",
+        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable\\rp_btn_open_pressed_shape_unsolid.xml"
     },
     {
         "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\em_red_packet_chatto_bg.xml",
@@ -100,48 +100,48 @@
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable\\rp_btn_white_selector.xml"
     },
     {
-        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\ease_btn_blue_pressed_shape.xml",
-        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\drawable\\ease_btn_blue_pressed_shape.xml"
-    },
-    {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\rp_btn_default_shape.xml",
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable\\rp_btn_default_shape.xml"
+    },
+    {
+        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\ease_btn_blue_pressed_shape.xml",
+        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\drawable\\ease_btn_blue_pressed_shape.xml"
     },
     {
         "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\ease_chat_image_selector.xml",
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\drawable\\ease_chat_image_selector.xml"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\rp_btn_grey_pressed_shape.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable\\rp_btn_grey_pressed_shape.xml"
-    },
-    {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\ease_sidebar_background_pressed.xml",
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\drawable\\ease_sidebar_background_pressed.xml"
     },
     {
-        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\rp_sidebar_background.xml",
-        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable\\rp_sidebar_background.xml"
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\rp_btn_grey_pressed_shape.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable\\rp_btn_grey_pressed_shape.xml"
     },
     {
-        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\rp_btn_blue_cancel_shape.xml",
-        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable\\rp_btn_blue_cancel_shape.xml"
-    },
-    {
-        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\rp_btn_white_pressed_shape.xml",
-        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable\\rp_btn_white_pressed_shape.xml"
-    },
-    {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\rp_btn_selector.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable\\rp_btn_selector.xml"
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\rp_btn_grey_selector.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable\\rp_btn_grey_selector.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\ease_chat_takepic_selector.xml",
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\drawable\\ease_chat_takepic_selector.xml"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\rp_btn_grey_selector.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable\\rp_btn_grey_selector.xml"
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\rp_btn_selector.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable\\rp_btn_selector.xml"
+    },
+    {
+        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\rp_btn_white_pressed_shape.xml",
+        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable\\rp_btn_white_pressed_shape.xml"
+    },
+    {
+        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\rp_btn_blue_cancel_shape.xml",
+        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable\\rp_btn_blue_cancel_shape.xml"
+    },
+    {
+        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\rp_sidebar_background.xml",
+        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable\\rp_sidebar_background.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable\\rp_btn_grey_normal_shape.xml",

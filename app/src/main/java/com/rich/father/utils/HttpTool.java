@@ -38,7 +38,7 @@ public class HttpTool {
         return result;
     }
 
-    /**注册*/
+    //注册
     public static String httpPostRegister(Context context, String url, String name, String password, String phone, String wechat, String qq, String inviteCode){
         String result = null;
         if(isNetworkConnected(context)){
@@ -58,16 +58,16 @@ public class HttpTool {
                     .build();
             try {
                 Response response = client.newCall(request).execute();
-                App.log(TAG, "--------------registerResult--------3333------->" + response.code());
                 if(response.code()==200){
                     result = response.body().string();
                 }else {
                     result = null;
                 }
             }catch (IOException e){
-                e.printStackTrace();
+                result = null;
             }
         }
+        App.log(TAG, "-----------result------------>"+result);
         return result;
     }
 

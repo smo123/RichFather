@@ -11,7 +11,9 @@ import android.widget.Toast;
 import com.easemob.redpacketsdk.RedPacket;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
+import com.rich.father.models.RequireResult;
 import com.rich.father.utils.HttpTool;
+import com.rich.father.utils.JsonParser;
 
 /**
  * Created by jinba on 2016/7/14.
@@ -21,8 +23,8 @@ public class App extends Application{
     public static final String TAG = App.class.getName();
     public static final boolean DEBUG = true;//是否允许debug输出
 
-    //private static final String BASE_URL = "http://feigou.ecs31.tomcats.pw/";//正式环境
-    private static final String BASE_URL = "http://192.168.1.109:8080/";//测试环境
+    private static final String BASE_URL = "http://feigou.ecs31.tomcats.pw/";//正式环境
+    //private static final String BASE_URL = "http://192.168.1.109:8080/";//测试环境
 
     public static final String REGISTER = BASE_URL+"RichDad/user/regist.do";
     public static final String LOGIN = BASE_URL+"RichDad/user/login.do";
@@ -42,17 +44,19 @@ public class App extends Application{
         EMOptions options = new EMOptions();
         options.setAcceptInvitationAlways(false);// 默认添加好友时，是不需要验证的，改成需要验证
         EMClient.getInstance().init(this, options);//初始化
-        EMClient.getInstance().setDebugMode(true);//在做打包混淆时，关闭debug模式，避免消耗不必要的资源
+        EMClient.getInstance().setDebugMode(false);//在做打包混淆时，关闭debug模式，避免消耗不必要的资源
         RedPacket.getInstance().initContext(this);//初始化红包
-        RedPacket.getInstance().setDebugMode(true);//打开Log开关 正式发布时请关闭
+        RedPacket.getInstance().setDebugMode(false);//打开Log开关 正式发布时请关闭
     }
 
     //注册
-    public static String register(Context context, String url, String name, String password, String phone, String wechat, String qq, String inviteCode){
-        String result = null;
-        result = HttpTool.httpPostRegister(context, url, name, password, phone, wechat, qq, inviteCode);
-        App.log(TAG, "--------------registerResult--------2222------->" + result);
-        return result;
+    public static RequireResult register(Context context, String url, String name, String password, String phone, String wechat, String qq, String inviteCode){
+        RequireResult requireResult = null;
+        String result = HttpTool.httpPostRegister(context, url, name, password, phone, wechat, qq, inviteCode);
+        if(result != null){
+            requireResult = JsonParser.parserRequireResult(result);
+        }
+        return requireResult;
     }
 
     //登录

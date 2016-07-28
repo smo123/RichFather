@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import com.hyphenate.chat.EMClient;
 import com.rich.father.R;
 import com.rich.father.app.App;
+import com.rich.father.models.RequireResult;
 import com.rich.father.utils.HttpAsyncTask;
 
 public class RegisterActivity extends BaseActivity implements View.OnClickListener, HttpAsyncTask.IHttpAsyncTask {
@@ -31,7 +32,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     private String qq;
     private String inviteCode;
 
-    private String registerResult;
+    private RequireResult requireResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,7 +100,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
             App.toast(this, getResources().getString(R.string.password_qq_err));
             return false;
         }
-        if(inviteCode.length()<6||TextUtils.isEmpty(inviteCode)){
+        if(inviteCode.length()<2||TextUtils.isEmpty(inviteCode)){
             App.toast(this, getResources().getString(R.string.password_invitecode_err));
             return false;
         }
@@ -122,8 +123,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                 }catch (Exception e){
                     e.printStackTrace();
                 }
-                registerResult = App.register(RegisterActivity.this, App.REGISTER, uerName, password, phone, wechat, qq, inviteCode);
-                App.log(TAG, "--------------registerResult--------111------->"+registerResult);
+                requireResult = App.register(RegisterActivity.this, App.REGISTER, uerName, password, phone, wechat, qq, inviteCode);
                 break;
         }
         return null;
@@ -138,7 +138,10 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     public void onPostExecute(Object result) {
         switch (requireType) {
             case REQUIRE_TYPE_REGISTER:
-                App.log(TAG, "--------------registerResult--------------->"+registerResult);
+                App.log(TAG, "-------------11111------------->");
+                if(requireResult != null){
+                    App.log(TAG, "--------------requireResult--------111------->"+requireResult.getMsg());
+                }
                 break;
         }
     }

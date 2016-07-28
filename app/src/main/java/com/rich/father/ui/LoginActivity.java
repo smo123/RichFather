@@ -83,14 +83,10 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
 
     @Override
     public Object doInBackground(Object... params) {
-        //String uerName = tvUserName.getText()+"";
-        //String password = editPassword.getText()+"";
-        String uerName = "smo2";
-        String password = "868688";
         requireType = (Integer)params[0];
         switch (requireType){
             case REQUIRE_TYPE_LOGIN_HX:
-                EMClient.getInstance().login(uerName, password,new EMCallBack() {//回调
+                EMClient.getInstance().login(phone, password,new EMCallBack() {//回调
                     @Override
                     public void onSuccess() {
                         EMClient.getInstance().groupManager().loadAllGroups();
@@ -111,7 +107,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
                 });
                 break;
             case REQUIRE_TYPE_LOGIN_RF:
-                loginResult = App.login(this, App.LOGIN,  uerName, password);
+                loginResult = App.login(this, App.LOGIN,  phone, password);
                 break;
         }
         return null;
