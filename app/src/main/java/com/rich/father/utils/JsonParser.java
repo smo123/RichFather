@@ -1,6 +1,7 @@
 package com.rich.father.utils;
 
 import com.google.gson.Gson;
+import com.rich.father.models.Products;
 import com.rich.father.models.RequireResult;
 
 /**
@@ -16,6 +17,14 @@ public class JsonParser {
         Gson gson = new Gson();
         requireResult = gson.fromJson(jsonData, RequireResult.class);
         return requireResult;
+    }
+
+    //解析产品
+    public static Products parserProducts(String jsonData){
+        Products products = null;
+        Gson gson = new Gson();
+        products = gson.fromJson(jsonData, Products.class);
+        return products;
     }
 
 }

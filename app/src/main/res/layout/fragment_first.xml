@@ -2,7 +2,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout style="@style/topbar_layout_style">
+    <RelativeLayout
+        android:id="@+id/layout_action_bar"
+        style="@style/topbar_layout_style">
 
         <TextView
             android:id="@+id/tv_title"
@@ -10,5 +12,11 @@
             android:text="@string/title_fragment_home" />
 
     </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_action_bar"></ListView>
 
 </RelativeLayout>

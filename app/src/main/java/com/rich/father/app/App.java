@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.easemob.redpacketsdk.RedPacket;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
+import com.rich.father.models.Products;
 import com.rich.father.models.RequireResult;
 import com.rich.father.utils.HttpTool;
 import com.rich.father.utils.JsonParser;
@@ -23,11 +24,12 @@ public class App extends Application{
     public static final String TAG = App.class.getName();
     public static final boolean DEBUG = true;//是否允许debug输出
 
-    private static final String BASE_URL = "http://feigou.ecs31.tomcats.pw/";//正式环境
-    //private static final String BASE_URL = "http://192.168.1.102:8080/";//测试环境
+    private static final String BASE_URL = "http://feigou.ecs31.tomcats.pw/RichDad/";//正式环境
+    //public static final String BASE_URL = "http://192.168.1.102:8080/RichDad/";//测试环境
 
-    public static final String REGISTER = BASE_URL+"RichDad/user/regist.do";
-    public static final String LOGIN = BASE_URL+"RichDad/user/login.do";
+    public static final String REGISTER = BASE_URL+"user/regist.do";
+    public static final String LOGIN = BASE_URL+"user/login.do";
+    public static final String GET_PRODUCTS = BASE_URL+"product/findAll.do";
 
     public static final String SP_PACKAGE_USER = "user";
     public static final String SP_KEY_LOGIN_STATUS = "login_status";
@@ -71,6 +73,16 @@ public class App extends Application{
             requireResult = JsonParser.parserRequireResult(result);
         }
         return requireResult;
+    }
+
+    //获取产品列表
+    public static Products getProducts(Context context, String url){
+        Products products = null;
+        String result = HttpTool.httpGet(context, url);
+        if(result != null){
+            products = JsonParser.parserProducts(result);
+        }
+        return products;
     }
 
     //把数据保存到SharedPreferences之中
