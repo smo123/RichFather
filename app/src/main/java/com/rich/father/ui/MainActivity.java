@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.rich.father.R;
+import com.rich.father.app.App;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -32,7 +33,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         fragmentManager = getSupportFragmentManager();//Fragment管理器
 
         //默认启动
-        if(!true){
+        String loginStatus = App.getData4SP(this, App.SP_PACKAGE_USER, App.SP_KEY_LOGIN_STATUS);
+        if(loginStatus.equalsIgnoreCase("0")){
             tvMenuHome.setSelected(true);
             FirstFragment firstFragment = FirstFragment.newInstance("", "");
             transaction = fragmentManager.beginTransaction();

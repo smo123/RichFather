@@ -1,7 +1,6 @@
 package com.rich.father.utils;
 
 import com.google.gson.Gson;
-import com.rich.father.app.App;
 import com.rich.father.models.RequireResult;
 
 /**
@@ -15,7 +14,6 @@ public class JsonParser {
     public static RequireResult parserRequireResult(String jsonData){
         RequireResult requireResult = null;
         Gson gson = new Gson();
-        App.log(TAG, "-----------jsonData------------>"+jsonData);
         requireResult = gson.fromJson(jsonData, RequireResult.class);
         return requireResult;
     }

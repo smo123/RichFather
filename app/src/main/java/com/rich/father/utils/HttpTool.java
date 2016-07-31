@@ -4,8 +4,6 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import com.rich.father.app.App;
-
 import java.io.IOException;
 
 import okhttp3.FormBody;
@@ -67,7 +65,6 @@ public class HttpTool {
                 result = null;
             }
         }
-        App.log(TAG, "-----------result------------>"+result);
         return result;
     }
 
@@ -81,7 +78,7 @@ public class HttpTool {
                     .add("user_password", password)
                     .build();
             Request request = new Request.Builder()
-                    .addHeader("Accept", "application/json")
+                    //.addHeader("Accept", "application/json")
                     .url(url)
                     .post(body)
                     .build();

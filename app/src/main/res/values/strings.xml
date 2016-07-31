@@ -27,4 +27,6 @@
     <string name="password_wechat_err">微信号码不正确</string>
     <string name="password_qq_err">QQ号码不正确</string>
     <string name="password_invitecode_err">验证码不正确</string>
+    <string name="login_fail">登录失败</string>
+    <string name="register_fail">注册失败</string>
 </resources>

@@ -13,6 +13,7 @@ import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 import com.rich.father.R;
 import com.rich.father.app.App;
+import com.rich.father.models.RequireResult;
 import com.rich.father.utils.HttpAsyncTask;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener, HttpAsyncTask.IHttpAsyncTask {
@@ -29,7 +30,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
     private String password;
     private String phone;
 
-    private String loginResult;
+    private RequireResult loginResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         btnRegister = (Button) findViewById(R.id.btn_register);
         btnLogin.setOnClickListener(this);
         btnRegister.setOnClickListener(this);
+
+        String userName = App.getData4SP(this, App.SP_PACKAGE_USER, App.SP_KEY_USER_NAME);
+        if(!userName.equalsIgnoreCase("-1")){
+            tvUserName.setText(userName);
+        }
     }
 
     @Override
@@ -50,7 +56,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         switch (v.getId()){
             case R.id.btn_login:
                 if(checkParams()){
-                    HttpAsyncTask.getInstance(this, REQUIRE_TYPE_LOGIN_HX);//登陆
+                    HttpAsyncTask.getInstance(this, REQUIRE_TYPE_LOGIN_RF);//登陆
                 }
                 break;
             case R.id.btn_register:
@@ -91,7 +97,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
                     public void onSuccess() {
                         EMClient.getInstance().groupManager().loadAllGroups();
                         EMClient.getInstance().chatManager().loadAllConversations();
-                        App.log(TAG, "-------------登录聊天服务器成功---------->");
+                        App.log(TAG, "-------------环信登录成功----------");
                         HttpAsyncTask.getInstance(LoginActivity.this, REQUIRE_TYPE_LOGIN_RF);//登陆富爸爸
                     }
 
@@ -102,7 +108,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
 
                     @Override
                     public void onError(int code, String message) {
-                        App.log(TAG, "-------------登录聊天服务器失败---------->");
+                        App.log(TAG, "-------------登录聊天服务器失败----------");
                     }
                 });
                 break;
@@ -124,7 +130,19 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
             case REQUIRE_TYPE_LOGIN_HX:
                 break;
             case REQUIRE_TYPE_LOGIN_RF:
-                App.log(TAG, "-------------loginResult---------->"+loginResult);
+                if(loginResult == null){
+                    return;
+                }
+                String status = loginResult.getStatus();
+                App.saveData2SP(this, App.SP_PACKAGE_USER, App.SP_KEY_LOGIN_STATUS, status);
+                if(status.equalsIgnoreCase("0")){
+                    App.toast(this, loginResult.getMsg());
+                    Intent intent = new Intent();
+                    intent.setClass(this, MainActivity.class);
+                    startActivity(intent);
+                }else {
+                    App.toast(this, loginResult.getMsg());
+                }
                 break;
         }
     }

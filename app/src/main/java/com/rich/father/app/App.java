@@ -24,10 +24,14 @@ public class App extends Application{
     public static final boolean DEBUG = true;//是否允许debug输出
 
     private static final String BASE_URL = "http://feigou.ecs31.tomcats.pw/";//正式环境
-    //private static final String BASE_URL = "http://192.168.1.109:8080/";//测试环境
+    //private static final String BASE_URL = "http://192.168.1.102:8080/";//测试环境
 
     public static final String REGISTER = BASE_URL+"RichDad/user/regist.do";
     public static final String LOGIN = BASE_URL+"RichDad/user/login.do";
+
+    public static final String SP_PACKAGE_USER = "user";
+    public static final String SP_KEY_LOGIN_STATUS = "login_status";
+    public static final String SP_KEY_USER_NAME = "user_name";
 
     //本方法保证在5.0以下的机器也能够运行，不要移除
     @Override
@@ -60,10 +64,13 @@ public class App extends Application{
     }
 
     //登录
-    public static String login(Context context, String url, String name, String password){
-        String result = null;
-        result = HttpTool.httpPostLogin(context, url, name, password);
-        return result;
+    public static RequireResult login(Context context, String url, String name, String password){
+        RequireResult requireResult = null;
+        String result = HttpTool.httpPostLogin(context, url, name, password);
+        if(result != null){
+            requireResult = JsonParser.parserRequireResult(result);
+        }
+        return requireResult;
     }
 
     //把数据保存到SharedPreferences之中
@@ -78,7 +85,7 @@ public class App extends Application{
     public static String getData4SP(Context context, String pk, String key) {
         String result = null;
         SharedPreferences sp = context.getSharedPreferences(pk, context.MODE_PRIVATE);
-        result = sp.getString(key, "");
+        result = sp.getString(key, "-1");
         return result;
     }
 

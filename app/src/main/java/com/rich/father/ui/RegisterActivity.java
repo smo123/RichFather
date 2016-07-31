@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-import com.hyphenate.chat.EMClient;
 import com.rich.father.R;
 import com.rich.father.app.App;
 import com.rich.father.models.RequireResult;
@@ -117,12 +116,12 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         requireType = (Integer)params[0];
         switch (requireType) {
             case REQUIRE_TYPE_REGISTER:
-                try {
+                /*try {
                     //注册失败会抛出HyphenateException
                     EMClient.getInstance().createAccount(uerName, password);//同步方法
                 }catch (Exception e){
                     e.printStackTrace();
-                }
+                }*/
                 requireResult = App.register(RegisterActivity.this, App.REGISTER, uerName, password, phone, wechat, qq, inviteCode);
                 break;
         }
@@ -138,9 +137,16 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     public void onPostExecute(Object result) {
         switch (requireType) {
             case REQUIRE_TYPE_REGISTER:
-                App.log(TAG, "-------------11111------------->");
-                if(requireResult != null){
-                    App.log(TAG, "--------------requireResult--------111------->"+requireResult.getMsg());
+                if(requireResult == null){
+                    return;
+                }
+                String status = requireResult.getStatus();
+                App.saveData2SP(this, App.SP_PACKAGE_USER, App.SP_KEY_USER_NAME, phone);
+                if(status.equalsIgnoreCase("0")){
+                    App.toast(this, requireResult.getMsg());
+                    finish();
+                }else {
+                    App.toast(this, requireResult.getMsg());
                 }
                 break;
         }
