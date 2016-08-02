@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.TextView;
 
+import com.hyphenate.EMCallBack;
+import com.hyphenate.chat.EMClient;
 import com.rich.father.R;
 import com.rich.father.app.App;
 
@@ -31,6 +33,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         tvMenuMe.setOnClickListener(this);
 
         fragmentManager = getSupportFragmentManager();//Fragment管理器
+
+        autoLogin();//自动登录环信
 
         //默认启动
         String loginStatus = App.getData4SP(this, App.SP_PACKAGE_USER, App.SP_KEY_LOGIN_STATUS);
@@ -74,6 +78,33 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 transaction.replace(R.id.layout_main_content, thirdFragment);
                 transaction.commit();
                 break;
+        }
+    }
+
+    //自动登录环信
+    private void autoLogin(){
+        String loginStatus = App.getData4SP(this, App.SP_PACKAGE_USER, App.SP_KEY_LOGIN_STATUS);
+        String phone = App.getData4SP(this, App.SP_PACKAGE_USER, App.SP_KEY_PHONE);
+        String password = App.getData4SP(this, App.SP_PACKAGE_USER, App.SP_KEY_PASSWORD);
+        if(loginStatus.equalsIgnoreCase("0")&&!phone.equalsIgnoreCase("-1")&&!password.equalsIgnoreCase("-1")){
+            EMClient.getInstance().login(phone, password,new EMCallBack() {//回调
+                @Override
+                public void onSuccess() {
+                    EMClient.getInstance().groupManager().loadAllGroups();
+                    EMClient.getInstance().chatManager().loadAllConversations();
+                    App.log(TAG, "-------------环信登录成功----------");
+                }
+
+                @Override
+                public void onProgress(int progress, String status) {
+
+                }
+
+                @Override
+                public void onError(int code, String message) {
+                    App.log(TAG, "-------------登录聊天服务器失败----------");
+                }
+            });
         }
     }
 

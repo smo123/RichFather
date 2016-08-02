@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.hyphenate.chat.EMClient;
 import com.rich.father.R;
 import com.rich.father.app.App;
 import com.rich.father.models.RequireResult;
@@ -66,6 +67,54 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         }
     }
 
+    @Override
+    public void onPreExecute() {
+
+    }
+
+    @Override
+    public Object doInBackground(Object... params) {
+        requireType = (Integer)params[0];
+        switch (requireType) {
+            case REQUIRE_TYPE_REGISTER:
+                try {
+                    //注册失败会抛出HyphenateException
+                    EMClient.getInstance().createAccount(phone, password);//同步方法
+                    requireResult = App.register(RegisterActivity.this, App.REGISTER, uerName, password, phone, wechat, qq, inviteCode);
+                    App.log(TAG, "--------注册--------->"+requireResult);
+                }catch (Exception e){
+                    e.printStackTrace();
+                    requireResult = null;
+                }
+                break;
+        }
+        return null;
+    }
+
+    @Override
+    public void onProgressUpdate(Integer... values) {
+
+    }
+
+    @Override
+    public void onPostExecute(Object result) {
+        switch (requireType) {
+            case REQUIRE_TYPE_REGISTER:
+                if(requireResult != null){
+                    String status = requireResult.getStatus();
+                    if(status.equalsIgnoreCase("0")){
+                        App.toast(this, requireResult.getMsg());
+                        finish();
+                    }else {
+                        App.toast(this, requireResult.getMsg());
+                    }
+                }else {
+                    App.toast(this, getResources().getString(R.string.register_fail));
+                }
+                break;
+        }
+    }
+
     //验证参数合法性
     private boolean checkParams(){
         uerName = tvUserName.getText()+"";
@@ -104,52 +153,6 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
             return false;
         }
         return true;
-    }
-
-    @Override
-    public void onPreExecute() {
-
-    }
-
-    @Override
-    public Object doInBackground(Object... params) {
-        requireType = (Integer)params[0];
-        switch (requireType) {
-            case REQUIRE_TYPE_REGISTER:
-                /*try {
-                    //注册失败会抛出HyphenateException
-                    EMClient.getInstance().createAccount(uerName, password);//同步方法
-                }catch (Exception e){
-                    e.printStackTrace();
-                }*/
-                requireResult = App.register(RegisterActivity.this, App.REGISTER, uerName, password, phone, wechat, qq, inviteCode);
-                break;
-        }
-        return null;
-    }
-
-    @Override
-    public void onProgressUpdate(Integer... values) {
-
-    }
-
-    @Override
-    public void onPostExecute(Object result) {
-        switch (requireType) {
-            case REQUIRE_TYPE_REGISTER:
-                if(requireResult == null){
-                    return;
-                }
-                String status = requireResult.getStatus();
-                App.saveData2SP(this, App.SP_PACKAGE_USER, App.SP_KEY_USER_NAME, phone);
-                if(status.equalsIgnoreCase("0")){
-                    App.toast(this, requireResult.getMsg());
-                    finish();
-                }else {
-                    App.toast(this, requireResult.getMsg());
-                }
-                break;
-        }
     }
 
 }

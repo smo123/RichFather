@@ -33,7 +33,11 @@ public class App extends Application{
 
     public static final String SP_PACKAGE_USER = "user";
     public static final String SP_KEY_LOGIN_STATUS = "login_status";
-    public static final String SP_KEY_USER_NAME = "user_name";
+    public static final String SP_KEY_PHONE = "phone";
+    public static final String SP_KEY_PASSWORD = "user_password";
+    public static final String SP_PACKAGE_REDPACKET = "red_packet";
+    public static final String SP_KEY_ORDER_ID = "order_id";
+    public static final String SP_KEY_RECEIVED_ID = "receive_id";
 
     //本方法保证在5.0以下的机器也能够运行，不要移除
     @Override
@@ -49,6 +53,7 @@ public class App extends Application{
         //环信相关
         EMOptions options = new EMOptions();
         options.setAcceptInvitationAlways(false);// 默认添加好友时，是不需要验证的，改成需要验证
+        options.setAutoLogin(true);
         EMClient.getInstance().init(this, options);//初始化
         EMClient.getInstance().setDebugMode(false);//在做打包混淆时，关闭debug模式，避免消耗不必要的资源
         RedPacket.getInstance().initContext(this);//初始化红包

@@ -45,9 +45,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         btnLogin.setOnClickListener(this);
         btnRegister.setOnClickListener(this);
 
-        String userName = App.getData4SP(this, App.SP_PACKAGE_USER, App.SP_KEY_USER_NAME);
-        if(!userName.equalsIgnoreCase("-1")){
-            tvUserName.setText(userName);
+        String phone = App.getData4SP(this, App.SP_PACKAGE_USER, App.SP_KEY_PHONE);
+        if(!phone.equalsIgnoreCase("-1")){
+            tvUserName.setText(phone);
         }
     }
 
@@ -56,7 +56,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         switch (v.getId()){
             case R.id.btn_login:
                 if(checkParams()){
-                    HttpAsyncTask.getInstance(this, REQUIRE_TYPE_LOGIN_RF);//登陆
+                    HttpAsyncTask.getInstance(this, REQUIRE_TYPE_LOGIN_HX);//登陆
                 }
                 break;
             case R.id.btn_register:
@@ -98,6 +98,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
                         EMClient.getInstance().groupManager().loadAllGroups();
                         EMClient.getInstance().chatManager().loadAllConversations();
                         App.log(TAG, "-------------环信登录成功----------");
+                        App.saveData2SP(LoginActivity.this, App.SP_PACKAGE_USER, App.SP_KEY_PASSWORD, password);
                         HttpAsyncTask.getInstance(LoginActivity.this, REQUIRE_TYPE_LOGIN_RF);//登陆富爸爸
                     }
 
@@ -136,10 +137,12 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
                 String status = loginResult.getStatus();
                 App.saveData2SP(this, App.SP_PACKAGE_USER, App.SP_KEY_LOGIN_STATUS, status);
                 if(status.equalsIgnoreCase("0")){
+                    App.saveData2SP(this, App.SP_PACKAGE_USER, App.SP_KEY_PHONE, phone);
                     App.toast(this, loginResult.getMsg());
                     Intent intent = new Intent();
                     intent.setClass(this, MainActivity.class);
                     startActivity(intent);
+                    finish();
                 }else {
                     App.toast(this, loginResult.getMsg());
                 }
