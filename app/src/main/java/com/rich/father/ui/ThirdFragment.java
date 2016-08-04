@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.ui.EaseChatFragment;
@@ -20,7 +21,7 @@ public class ThirdFragment extends EaseChatFragment {
     private static final String ARG_PARAM2 = "param2";
 
     private Activity activity;
-    private Button btnLogout;
+    private Button btnChange, btnLogout;
 
     private String mParam1;
     private String mParam2;
@@ -48,7 +49,14 @@ public class ThirdFragment extends EaseChatFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_third, container, false);
+        btnChange = (Button)view.findViewById(R.id.btn_my_change);
         btnLogout = (Button)view.findViewById(R.id.btn_logout);
+        btnChange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RedPacketUtil.startChangeActivity(getActivity());
+            }
+        });
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,10 +84,6 @@ public class ThirdFragment extends EaseChatFragment {
                 });
             }
         });
-
-        /*if(true){
-            RedPacketUtil.startChangeActivity(getActivity());
-        }*/
 
         return view;
     }

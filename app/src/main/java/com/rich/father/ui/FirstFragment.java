@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.easemob.redpacketsdk.constant.RPConstant;
 import com.easemob.redpacketui.RedPacketConstant;
 import com.easemob.redpacketui.utils.RedPacketUtil;
+import com.hyphenate.easeui.EaseConstant;
 import com.hyphenate.easeui.ui.EaseChatFragment;
 import com.rich.father.R;
 import com.rich.father.adapter.ProductAdapter;
@@ -122,7 +122,7 @@ public class FirstFragment extends EaseChatFragment implements HttpAsyncTask.IHt
                 break;
             case REQUIRE_TYPE_BUY:
                 String phone = App.getData4SP(activity, App.SP_PACKAGE_USER, App.SP_KEY_PHONE);
-                RedPacketUtil.startRedPacketActivityForResult(FirstFragment.this, RPConstant.CHATTYPE_SINGLE, "18775769566", REQUEST_CODE_SEND_RED_PACKET);
+                RedPacketUtil.startRedPacketActivityForResult(FirstFragment.this, EaseConstant.CHATTYPE_SINGLE, "18775769566", REQUEST_CODE_SEND_RED_PACKET);
                 break;
         }
         return null;

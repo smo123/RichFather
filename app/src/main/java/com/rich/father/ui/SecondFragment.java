@@ -50,10 +50,10 @@ public class SecondFragment extends EaseChatFragment {
 
         String orderId = App.getData4SP(activity, App.SP_PACKAGE_REDPACKET, App.SP_KEY_ORDER_ID);
         String receiveId = App.getData4SP(activity, App.SP_PACKAGE_REDPACKET, App.SP_KEY_RECEIVED_ID);
-        App.log(TAG, "moneyID---->"+orderId+",  specialReceiveId---->"+receiveId);
         EMMessage message = EMMessage.createTxtSendMessage("领取红包", receiveId);
         message.setAttribute(RedPacketConstant.EXTRA_RED_PACKET_ID, orderId);//订单号
-        RedPacketUtil.openRedPacket(activity, EaseConstant.CHATTYPE_SINGLE, message, receiveId, null);
+        RedPacketUtil.openRedPacket(activity, EaseConstant.CHATTYPE_SINGLE, message);
+
         return v;
     }
 
