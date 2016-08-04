@@ -15,6 +15,7 @@ import com.rich.father.R;
 import com.rich.father.app.App;
 import com.rich.father.models.RequireResult;
 import com.rich.father.utils.HttpAsyncTask;
+import com.rich.father.widget.LoadingDialog;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener, HttpAsyncTask.IHttpAsyncTask {
 
@@ -84,7 +85,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
 
     @Override
     public void onPreExecute() {
-
+        //LoadingDialog.showDialog(LoginActivity.this);
     }
 
     @Override
@@ -127,6 +128,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
 
     @Override
     public void onPostExecute(Object result) {
+        LoadingDialog.dismissDialog();
         switch (requireType){
             case REQUIRE_TYPE_LOGIN_HX:
                 break;

@@ -36,8 +36,8 @@ public class App extends Application{
     public static final String SP_KEY_PHONE = "phone";
     public static final String SP_KEY_PASSWORD = "user_password";
     public static final String SP_PACKAGE_REDPACKET = "red_packet";
-    public static final String SP_KEY_ORDER_ID = "order_id";
-    public static final String SP_KEY_RECEIVED_ID = "receive_id";
+    public static final String SP_KEY_RED_PACKET_ID = "red_packet_id";
+    public static final String SP_KEY_RED_PACKET_RECEIVED_ID = "red_packet_receive_id";
 
     //本方法保证在5.0以下的机器也能够运行，不要移除
     @Override

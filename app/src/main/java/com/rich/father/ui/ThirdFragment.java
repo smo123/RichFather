@@ -66,8 +66,8 @@ public class ThirdFragment extends EaseChatFragment implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_get_red_package:
-                String orderId = App.getData4SP(activity, App.SP_PACKAGE_REDPACKET, App.SP_KEY_ORDER_ID);
-                String receiveId = App.getData4SP(activity, App.SP_PACKAGE_REDPACKET, App.SP_KEY_RECEIVED_ID);
+                String orderId = App.getData4SP(activity, App.SP_PACKAGE_REDPACKET, App.SP_KEY_RED_PACKET_ID);
+                String receiveId = App.getData4SP(activity, App.SP_PACKAGE_REDPACKET, App.SP_KEY_RED_PACKET_RECEIVED_ID);
                 EMMessage message = EMMessage.createTxtSendMessage("领取红包", receiveId);
                 message.setAttribute(RedPacketConstant.EXTRA_RED_PACKET_ID, orderId);//订单号
                 RedPacketUtil.openRedPacket(activity, EaseConstant.CHATTYPE_SINGLE, message);

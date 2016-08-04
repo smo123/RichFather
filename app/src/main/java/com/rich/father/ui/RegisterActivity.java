@@ -13,6 +13,7 @@ import com.rich.father.R;
 import com.rich.father.app.App;
 import com.rich.father.models.RequireResult;
 import com.rich.father.utils.HttpAsyncTask;
+import com.rich.father.widget.LoadingDialog;
 
 public class RegisterActivity extends BaseActivity implements View.OnClickListener, HttpAsyncTask.IHttpAsyncTask {
 
@@ -68,7 +69,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
 
     @Override
     public void onPreExecute() {
-
+        LoadingDialog.showDialog(RegisterActivity.this);
     }
 
     @Override
@@ -96,6 +97,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
 
     @Override
     public void onPostExecute(Object result) {
+        LoadingDialog.dismissDialog();
         switch (requireType) {
             case REQUIRE_TYPE_REGISTER:
                 if(requireResult != null){

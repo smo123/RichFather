@@ -23,6 +23,7 @@ import com.rich.father.utils.HttpAsyncTask;
 import com.rich.father.widget.LoadingDialog;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 public class FirstFragment extends EaseChatFragment implements HttpAsyncTask.IHttpAsyncTask{
 
@@ -94,13 +95,34 @@ public class FirstFragment extends EaseChatFragment implements HttpAsyncTask.IHt
             switch (requestCode) {
                 case REQUEST_CODE_SEND_RED_PACKET:
                     if (data != null){
+                        Bundle bundle = data.getExtras();
+                        Set<String> keySet = bundle.keySet();//获取所有的Key
+                        for(String key : keySet){//bundle.get(key);来获取对应的value
+                            App.log("xu", "key---->"+key+"-----value------>"+bundle.getString(key));
+                        }
+
                         String greetings = data.getStringExtra(RedPacketConstant.EXTRA_RED_PACKET_GREETING);
-                        String moneyID = data.getStringExtra(RedPacketConstant.EXTRA_RED_PACKET_ID);
-                        String specialReceiveId = data.getStringExtra(RedPacketConstant.EXTRA_RED_PACKET_RECEIVER_ID);
-                        String redPacketType = data.getStringExtra(RedPacketConstant.EXTRA_RED_PACKET_TYPE);
-                        App.saveData2SP(activity, App.SP_PACKAGE_REDPACKET, App.SP_KEY_ORDER_ID, moneyID);
-                        App.saveData2SP(activity, App.SP_PACKAGE_REDPACKET, App.SP_KEY_RECEIVED_ID, specialReceiveId);
-                        App.log(TAG, "greetings---->"+greetings+",  moneyID---->"+moneyID+",  specialReceiveId---->"+specialReceiveId+",  redPacketType---->"+redPacketType);
+                        String red_packet_id = data.getStringExtra(RedPacketConstant.EXTRA_RED_PACKET_ID);
+                        String rp_receive_id = data.getStringExtra(RedPacketConstant.EXTRA_RED_PACKET_RECEIVER_ID);
+                        String rp_type = data.getStringExtra(RedPacketConstant.EXTRA_RED_PACKET_TYPE);
+                        String refresh_group_rp = data.getStringExtra(RedPacketConstant.REFRESH_GROUP_RED_PACKET_ACTION);
+                        String sender_id = data.getStringExtra(RedPacketConstant.EXTRA_RED_PACKET_SENDER_ID);
+                        String is_open_rp_msg = data.getStringExtra(RedPacketConstant.MESSAGE_ATTR_IS_RED_PACKET_ACK_MESSAGE);
+                        String is_rp_msg = data.getStringExtra(RedPacketConstant.MESSAGE_ATTR_IS_RED_PACKET_MESSAGE);
+                        String sender_name = data.getStringExtra(RedPacketConstant.EXTRA_RED_PACKET_SENDER_NAME);
+                        String receiver_name = data.getStringExtra(RedPacketConstant.EXTRA_RED_PACKET_RECEIVER_NAME);
+                        String sponsor_name = data.getStringExtra(RedPacketConstant.EXTRA_SPONSOR_NAME);
+                        String rp_group_id = data.getStringExtra(RedPacketConstant.EXTRA_RED_PACKET_GROUP_ID);
+                        String msg_rp_type = data.getStringExtra(RedPacketConstant.MESSAGE_ATTR_RED_PACKET_TYPE);
+                        String group_exclusive_rp = data.getStringExtra(RedPacketConstant.GROUP_RED_PACKET_TYPE_EXCLUSIVE);
+                        String special_rp_receiver_id = data.getStringExtra(RedPacketConstant.MESSAGE_ATTR_SPECIAL_RECEIVER_ID);
+
+                        App.saveData2SP(activity, App.SP_PACKAGE_REDPACKET, App.SP_KEY_RED_PACKET_ID, red_packet_id);
+                        App.saveData2SP(activity, App.SP_PACKAGE_REDPACKET, App.SP_KEY_RED_PACKET_RECEIVED_ID, rp_receive_id);
+                        //App.log("xu", "greetings---->"+greetings+",  red_packet_id---->"+red_packet_id+",  rp_receive_id---->"+rp_receive_id+",  rp_type---->"+rp_type);
+                        //App.log("xu", "refresh_group_rp---->"+refresh_group_rp+",  sender_id---->"+sender_id+",  is_open_rp_msg---->"+is_open_rp_msg+",  is_rp_msg---->"+is_rp_msg);
+                        //App.log("xu", "sender_name---->"+sender_name+",  receiver_name---->"+receiver_name+",  sponsor_name---->"+sponsor_name+",  rp_group_id---->"+rp_group_id);
+                        //App.log("xu", "msg_rp_type---->"+msg_rp_type+",  group_exclusive_rp---->"+group_exclusive_rp+",  special_rp_receiver_id---->"+special_rp_receiver_id);
                     }
                     break;
                 default:
