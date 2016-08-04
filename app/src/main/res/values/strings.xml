@@ -29,4 +29,10 @@
     <string name="password_invitecode_err">验证码不正确</string>
     <string name="login_fail">登录失败</string>
     <string name="register_fail">注册失败</string>
+    <string name="price">¥:</string>
+    <string name="sales">销量:</string>
+    <string name="btn_get_red_package">领红包</string>
+    <string name="btn_my_change">我的钱包</string>
+    <string name="btn_logout">登出</string>
+    <string name="btn_back">返回</string>
 </resources>

@@ -13,13 +13,12 @@
 
         <Button
             android:id="@+id/btn_register"
-            android:layout_width="wrap_content"
+            style="@style/btn_style"
+            android:layout_width="48dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/btn_bg"
-            android:text="@string/action_register"
-            android:textColor="@color/white" />
+            android:text="@string/action_register" />
 
     </RelativeLayout>
 

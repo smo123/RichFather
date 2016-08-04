@@ -7,13 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.easemob.redpacketui.RedPacketConstant;
-import com.easemob.redpacketui.utils.RedPacketUtil;
-import com.hyphenate.chat.EMMessage;
-import com.hyphenate.easeui.EaseConstant;
 import com.hyphenate.easeui.ui.EaseChatFragment;
 import com.rich.father.R;
-import com.rich.father.app.App;
 
 public class SecondFragment extends EaseChatFragment {
 
@@ -47,12 +42,6 @@ public class SecondFragment extends EaseChatFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_second, container, false);
-
-        String orderId = App.getData4SP(activity, App.SP_PACKAGE_REDPACKET, App.SP_KEY_ORDER_ID);
-        String receiveId = App.getData4SP(activity, App.SP_PACKAGE_REDPACKET, App.SP_KEY_RECEIVED_ID);
-        EMMessage message = EMMessage.createTxtSendMessage("领取红包", receiveId);
-        message.setAttribute(RedPacketConstant.EXTRA_RED_PACKET_ID, orderId);//订单号
-        RedPacketUtil.openRedPacket(activity, EaseConstant.CHATTYPE_SINGLE, message);
 
         return v;
     }

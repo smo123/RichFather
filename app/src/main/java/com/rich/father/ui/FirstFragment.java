@@ -20,6 +20,7 @@ import com.rich.father.app.App;
 import com.rich.father.models.Product;
 import com.rich.father.models.Products;
 import com.rich.father.utils.HttpAsyncTask;
+import com.rich.father.widget.LoadingDialog;
 
 import java.util.ArrayList;
 
@@ -110,7 +111,7 @@ public class FirstFragment extends EaseChatFragment implements HttpAsyncTask.IHt
 
     @Override
     public void onPreExecute() {
-
+        LoadingDialog.showDialog(activity);
     }
 
     @Override
@@ -135,6 +136,7 @@ public class FirstFragment extends EaseChatFragment implements HttpAsyncTask.IHt
 
     @Override
     public void onPostExecute(Object result) {
+        LoadingDialog.dismissDialog();
         switch (getRequireType){
             case REQUIRE_TYPE_NORMAL:
                 if(products != null){

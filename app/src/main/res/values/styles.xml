@@ -16,6 +16,7 @@
         <item name="android:textColor">@drawable/menu_text_bg</item>
         <item name="android:textSize">10sp</item>
         <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">5dp</item>
     </style>
 
     //===============================顶部标题栏=======================================
@@ -34,4 +35,47 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">20sp</item>
     </style>
+
+    //===============================价格和销量=======================================
+    <style name="price_and_sales_title_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="price_and_sales_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    //===============================价格和销量=======================================
+    <style name="btn_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/btn_bg</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    //====================== loading dialog style=======================================
+    <style name="loading_dialog_style" parent="android:Theme.Dialog">
+        <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 设置dialog的背景 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 是否显示title -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 也是个drawable，定义contentoverlay的背景 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 背景是否模糊显示 -->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
 </resources>

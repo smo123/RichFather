@@ -66,7 +66,7 @@ public class ProductAdapter extends BaseAdapter {
 
         final Product product = data.get(position);
         if(product != null){
-            Glide.with(context).load(App.BASE_URL+product.getProduct_imgUrl()).centerCrop().into(ivProductIcon);
+            Glide.with(context).load(App.BASE_URL+product.getProduct_imgUrl()).into(ivProductIcon);
             tvTitle.setText(product.getProduct_title());
             tvPrice.setText(product.getProduct_price());
             tvSales.setText(product.getProduct_sales());

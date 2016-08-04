@@ -13,15 +13,18 @@
     </RelativeLayout>
 
     <Button
+        android:id="@+id/btn_get_red_package"
+        style="@style/btn_style"
+        android:text="@string/btn_get_red_package" />
+
+    <Button
         android:id="@+id/btn_my_change"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="钱包"/>
+        style="@style/btn_style"
+        android:text="@string/btn_my_change" />
 
     <Button
         android:id="@+id/btn_logout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="登出"/>
+        style="@style/btn_style"
+        android:text="@string/btn_logout" />
 
 </LinearLayout>

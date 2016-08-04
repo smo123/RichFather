@@ -6,14 +6,14 @@
 
     <RelativeLayout style="@style/topbar_layout_style">
 
-        <ImageButton
+        <Button
             android:id="@+id/btn_back"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            style="@style/btn_style"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/btn_back" />
+            android:text="@string/back" />
 
         <TextView
             android:id="@+id/tv_title"
@@ -145,14 +145,9 @@
 
             <Button
                 android:id="@+id/btn_register"
-                style="?android:textAppearanceSmall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/btn_style"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/btn_bg"
-                android:text="@string/action_register"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
+                android:text="@string/action_register" />
 
         </LinearLayout>
     </ScrollView>

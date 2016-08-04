@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 
 import com.hyphenate.chat.EMClient;
 import com.rich.father.R;
@@ -22,7 +21,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     private int requireType;
 
     private EditText tvUserName, editPassword, editConfirmPassword, editPhoneNumber, editWeChat, editQQ, editInviteCode;
-    private ImageButton btnBack;
+    private Button btnBack;
     private Button btnRegister;
 
     private String uerName;
@@ -47,7 +46,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         editWeChat = (EditText) findViewById(R.id.edit_wechat);
         editQQ = (EditText) findViewById(R.id.edit_qq);
         editInviteCode = (EditText) findViewById(R.id.edit_invite_code);
-        btnBack = (ImageButton) findViewById(R.id.btn_back);
+        btnBack = (Button) findViewById(R.id.btn_back);
         btnRegister = (Button) findViewById(R.id.btn_register);
         btnBack.setOnClickListener(this);
         btnRegister.setOnClickListener(this);
@@ -81,7 +80,6 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                     //注册失败会抛出HyphenateException
                     EMClient.getInstance().createAccount(phone, password);//同步方法
                     requireResult = App.register(RegisterActivity.this, App.REGISTER, uerName, password, phone, wechat, qq, inviteCode);
-                    App.log(TAG, "--------注册--------->"+requireResult);
                 }catch (Exception e){
                     e.printStackTrace();
                     requireResult = null;
