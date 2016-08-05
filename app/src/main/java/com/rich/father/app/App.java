@@ -37,7 +37,10 @@ public class App extends Application{
     public static final String SP_KEY_PASSWORD = "user_password";
     public static final String SP_PACKAGE_REDPACKET = "red_packet";
     public static final String SP_KEY_RED_PACKET_ID = "red_packet_id";
-    public static final String SP_KEY_RED_PACKET_RECEIVED_ID = "red_packet_receive_id";
+    public static final String SP_KEY_RED_PACKET_FROM_USER_ID = "red_packet_from_user_id";
+    public static final String SP_KEY_RED_PACKET_RECEIVER_ID = "red_packet_receiver_id";
+    public static final String SP_KEY_RED_PACKET_TYPE = "red_packet_type";
+    public static final String SP_KEY_RED_PACKET_GREETING = "red_packet_greeting";
 
     //本方法保证在5.0以下的机器也能够运行，不要移除
     @Override

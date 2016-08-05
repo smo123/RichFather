@@ -7,11 +7,14 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.easemob.redpacketsdk.bean.RedPacketInfo;
 import com.easemob.redpacketsdk.bean.TokenData;
+import com.easemob.redpacketsdk.callback.PacketDetailCallback;
 import com.easemob.redpacketsdk.constant.RPConstant;
+import com.easemob.redpacketsdk.presenter.impl.PacketDetailPresenter;
 import com.easemob.redpacketui.RedPacketConstant;
 import com.easemob.redpacketui.ui.activity.RPChangeActivity;
 import com.easemob.redpacketui.ui.activity.RPRedPacketActivity;
@@ -20,6 +23,8 @@ import com.hyphenate.chat.EMMessage;
 import com.hyphenate.easeui.EaseConstant;
 import com.hyphenate.easeui.domain.EaseUser;
 import com.hyphenate.easeui.utils.EaseUserUtils;
+
+import java.util.HashMap;
 
 /**
  * Created by max on 16/5/24.
@@ -89,6 +94,38 @@ public class RedPacketUtil {
                 Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
             }
         });
+
+        /*PacketDetailPresenter presenter = new PacketDetailPresenter(mContext, this);
+          presenter.getMoneyDetail(mRedPacketInfo, 0, PageUtil.PAGE_LIMIT);
+          调用这个方法 PageUtil.PAGE_LIMIT 这个 是分页用的 你单聊 可以传个 大于0的数字
+        * this 要传一个callback
+        * mRedPacketInfo 里设置一下红包id 就可以了 */
+        PacketDetailPresenter presenter = new PacketDetailPresenter(activity, new PacketDetailCallback() {
+            @Override
+            public void showSinglePacketDetail(RedPacketInfo redPacketInfo) {
+                Log.i("xu", "fromUserId---->"+redPacketInfo.fromUserId);
+                Log.i("xu", "toUserId---->"+redPacketInfo.toUserId);
+                Log.i("xu", "fromNickName---->"+redPacketInfo.fromNickName);
+                Log.i("xu", "toNickName---->"+redPacketInfo.toNickName);
+                Log.i("xu", "moneyAmount---->"+redPacketInfo.moneyAmount);
+                Log.i("xu", "moneyID---->"+redPacketInfo.moneyID);
+                Log.i("xu", "date---->"+redPacketInfo.date);
+                Log.i("xu", "moneyMsgDirect---->"+redPacketInfo.moneyMsgDirect);
+                Log.i("xu", "chatType---->"+redPacketInfo.chatType);
+                Log.i("xu", "takenMoney---->"+redPacketInfo.takenMoney);
+            }
+
+            @Override
+            public void showGroupPacketDetail(HashMap<String, Object> hashMap, String s, String s1, String s2) {
+
+            }
+
+            @Override
+            public void showDetailError(String s, String s1) {
+
+            }
+        });
+        presenter.getMoneyDetail(redPacketInfo, 0, 1);
     }
 
     //进入零钱页面
