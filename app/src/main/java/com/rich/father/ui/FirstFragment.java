@@ -10,6 +10,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.easemob.redpacketsdk.bean.RedPacketInfo;
+import com.easemob.redpacketsdk.callback.PacketDetailCallback;
+import com.easemob.redpacketsdk.constant.RPConstant;
+import com.easemob.redpacketsdk.presenter.impl.PacketDetailPresenter;
 import com.easemob.redpacketui.RedPacketConstant;
 import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.hyphenate.easeui.EaseConstant;
@@ -23,6 +27,7 @@ import com.rich.father.utils.HttpAsyncTask;
 import com.rich.father.widget.LoadingDialog;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class FirstFragment extends EaseChatFragment implements HttpAsyncTask.IHttpAsyncTask{
 
@@ -98,9 +103,37 @@ public class FirstFragment extends EaseChatFragment implements HttpAsyncTask.IHt
                         String moneyID = data.getStringExtra(RedPacketConstant.EXTRA_RED_PACKET_ID);
                         String specialReceiveId = data.getStringExtra(RedPacketConstant.EXTRA_RED_PACKET_RECEIVER_ID);
                         String redPacketType = data.getStringExtra(RedPacketConstant.EXTRA_RED_PACKET_TYPE);
+
+                        /*PacketDetailPresenter presenter = new PacketDetailPresenter(mContext, this);
+                          presenter.getMoneyDetail(mRedPacketInfo, 0, PageUtil.PAGE_LIMIT);
+                        调用这个方法 PageUtil.PAGE_LIMIT 这个 是分页用的 你单聊 可以传个 大于0的数字
+                        * this 要传一个callback
+                        * mRedPacketInfo 里设置一下红包id 就可以了 */
+                        PacketDetailPresenter presenter = new PacketDetailPresenter(activity, new PacketDetailCallback() {
+                            @Override
+                            public void showSinglePacketDetail(RedPacketInfo redPacketInfo) {
+                                App.log(TAG, "moneyAmount---->"+redPacketInfo.moneyAmount);
+                            }
+
+                            @Override
+                            public void showGroupPacketDetail(HashMap<String, Object> hashMap, String s, String s1, String s2) {
+
+                            }
+
+                            @Override
+                            public void showDetailError(String s, String s1) {
+
+                            }
+                        });
+
+                        RedPacketInfo redPacketInfo = new RedPacketInfo();
+                        redPacketInfo.moneyID = moneyID;
+                        redPacketInfo.moneyMsgDirect = RPConstant.MESSAGE_DIRECT_RECEIVE;//方向是接收红包
+                        redPacketInfo.chatType = RPConstant.CHATTYPE_SINGLE;
+                        presenter.getMoneyDetail(redPacketInfo, 0, 1);
+
                         App.saveData2SP(activity, App.SP_PACKAGE_REDPACKET, App.SP_KEY_ORDER_ID, moneyID);
                         App.saveData2SP(activity, App.SP_PACKAGE_REDPACKET, App.SP_KEY_RECEIVED_ID, specialReceiveId);
-                        App.log(TAG, "greetings---->"+greetings+",  moneyID---->"+moneyID+",  specialReceiveId---->"+specialReceiveId+",  redPacketType---->"+redPacketType);
                     }
                     break;
                 default:
