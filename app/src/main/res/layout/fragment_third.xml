@@ -1,6 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gray"
     android:orientation="vertical">
 
     <RelativeLayout style="@style/topbar_layout_style">
@@ -12,19 +13,102 @@
 
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/btn_get_red_package"
-        style="@style/btn_style"
-        android:text="@string/btn_get_red_package" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_mymoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/tv_mymoney"
+                android:textColor="@color/red"
+                android:textSize="17sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_money_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_money_type"
+                    android:textColor="@color/red"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_money_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_money_type"
+                    android:text="@string/tv_money_amount"
+                    android:textColor="@color/red"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_in_money"
+                style="@style/ucenter_btn_style"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/btn_in_money"
+                android:textColor="@color/red" />
+
+            <Button
+                android:id="@+id/btn_out_money"
+                style="@style/ucenter_btn_style"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/btn_out_money"
+                android:textColor="@color/red" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/btn_my_change"
-        style="@style/btn_style"
+        style="@style/ucenter_btn_style"
+        android:drawableLeft="@mipmap/wallet"
         android:text="@string/btn_my_change" />
 
     <Button
+        android:id="@+id/btn_get_red_package"
+        style="@style/ucenter_btn_style"
+        android:drawableLeft="@mipmap/redpacket"
+        android:text="@string/btn_get_red_package" />
+
+    <Button
+        android:id="@+id/btn_my_msg"
+        style="@style/ucenter_btn_style"
+        android:drawableLeft="@mipmap/message"
+        android:text="@string/btn_my_msg" />
+
+    <Button
         android:id="@+id/btn_logout"
-        style="@style/btn_style"
+        style="@style/ucenter_btn_style"
+        android:drawableLeft="@mipmap/logout"
         android:text="@string/btn_logout" />
 
 </LinearLayout>

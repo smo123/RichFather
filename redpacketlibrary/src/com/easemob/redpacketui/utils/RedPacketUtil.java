@@ -31,6 +31,11 @@ import java.util.HashMap;
  */
 public class RedPacketUtil {
 
+    private static IOpenRedPacket mOpenRedPacket;
+    public interface IOpenRedPacket{
+        void open(String fromUserId, String moneyAmount, String moneyID);
+    }
+
     //进入发红包页面
     public static void startRedPacketActivityForResult(Fragment fragment, int chatType, final String toChatUsername, int requestCode) {
         //发送者头像url
@@ -57,7 +62,7 @@ public class RedPacketUtil {
     }
 
     //拆红包的方法
-    public static void openRedPacket(final FragmentActivity activity, final int chatType, final EMMessage message) {
+    public static void openRedPacket(final FragmentActivity activity, IOpenRedPacket openRedPacket, final int chatType, final EMMessage message) {
         final ProgressDialog progressDialog = new ProgressDialog(activity);
         progressDialog.setCanceledOnTouchOutside(false);
         //接收者头像url 默认值为none
@@ -95,6 +100,7 @@ public class RedPacketUtil {
             }
         });
 
+        mOpenRedPacket = openRedPacket;
         /*PacketDetailPresenter presenter = new PacketDetailPresenter(mContext, this);
           presenter.getMoneyDetail(mRedPacketInfo, 0, PageUtil.PAGE_LIMIT);
           调用这个方法 PageUtil.PAGE_LIMIT 这个 是分页用的 你单聊 可以传个 大于0的数字
@@ -113,6 +119,7 @@ public class RedPacketUtil {
                 Log.i("xu", "moneyMsgDirect---->"+redPacketInfo.moneyMsgDirect);
                 Log.i("xu", "chatType---->"+redPacketInfo.chatType);
                 Log.i("xu", "takenMoney---->"+redPacketInfo.takenMoney);
+                mOpenRedPacket.open(redPacketInfo.fromUserId, redPacketInfo.moneyAmount, redPacketInfo.moneyID);
             }
 
             @Override

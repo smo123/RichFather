@@ -7,7 +7,10 @@
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="red">#d34e44</color>
+    <color name="gray">#dddddd</color>
     <color name="main_style_normal_color">#F4c600</color>
     <color name="main_style_pressed_color">#ea8010</color>
 
+    <color name="btn_white_normal">#ffffff</color>
+    <color name="btn_white_pressed">#eeeeee</color>
 </resources>

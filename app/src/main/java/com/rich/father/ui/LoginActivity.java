@@ -3,6 +3,8 @@ package com.rich.father.ui;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.view.Window;
 import android.widget.AutoCompleteTextView;
@@ -83,9 +85,22 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         return true;
     }
 
+    private static final int SHOW_PROGRESS_BAR = 1;
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what){
+                case SHOW_PROGRESS_BAR:
+                    LoadingDialog.showDialog(LoginActivity.this);
+                    break;
+            }
+        }
+    };
+
     @Override
     public void onPreExecute() {
-        //LoadingDialog.showDialog(LoginActivity.this);
+        handler.sendEmptyMessage(SHOW_PROGRESS_BAR);
     }
 
     @Override

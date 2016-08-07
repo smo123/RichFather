@@ -614,7 +614,7 @@
     <string name="send_fail">Send failed</string>
     <string name="send_failure_please">Send failure, please test whether the server connection</string>
     <string name="send_money_bottom_text">未领取的红包，将于24小时后发起退款</string>
-    <string name="send_money_title">发红包</string>
+    <string name="send_money_title">充值</string>
     <string name="send_successful">Request was sent, waiting for the peer to accept</string>
     <string name="send_the_request_is">The request was sent and waiting for owner approval</string>
     <string name="send_who_money">给%1$s发了个红包</string>
@@ -653,7 +653,7 @@
     <string name="str_upload">上传</string>
     <string name="str_withdraw">提现</string>
     <string name="str_your_withdraw_cash_card">您的提现银行卡信息</string>
-    <string name="subtitle_content">环信红包服务</string>
+    <string name="subtitle_content">快速便捷</string>
     <string name="sure_to_empty_this">Clear all messages?</string>
     <string name="temporary_does_not">Currently the video size greater than 10M is not supported!</string>
     <string name="text_ack_msg">Read</string>

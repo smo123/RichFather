@@ -4,6 +4,8 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+import com.rich.father.app.App;
+
 import java.io.IOException;
 
 import okhttp3.FormBody;
@@ -84,6 +86,95 @@ public class HttpTool {
                     .build();
             try {
                 Response response = client.newCall(request).execute();
+                if(response.code()==200){
+                    result = response.body().string();
+                }else {
+                    result = null;
+                }
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
+
+    /**充值*/
+    public static String httpPostInMoney(Context context, String url, String fromUserId, String toUserId, String moneyAmount, String moneyID, String moneyMsgDirect, String takenMoney){
+        String result = null;
+        if(isNetworkConnected(context)){
+            OkHttpClient client = new OkHttpClient();
+            RequestBody body = new FormBody.Builder()
+                    .add("fromUserId", fromUserId)
+                    .add("toUserId", toUserId)
+                    .add("moneyAmount", moneyAmount)
+                    .add("moneyID", moneyID)
+                    .add("moneyMsgDirect", moneyMsgDirect)
+                    .add("takenMoney", takenMoney)
+                    .build();
+            Request request = new Request.Builder()
+                    //.addHeader("Accept", "application/json")
+                    .url(url)
+                    .post(body)
+                    .build();
+            try {
+                Response response = client.newCall(request).execute();
+                App.log(TAG, "--------code--------->"+response.code());
+                if(response.code()==200){
+                    result = response.body().string();
+                }else {
+                    result = null;
+                }
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
+
+    /**充值历史记录*/
+    public static String httpPostInMoneyHistory(Context context, String url, String fromUserId){
+        String result = null;
+        if(isNetworkConnected(context)){
+            OkHttpClient client = new OkHttpClient();
+            RequestBody body = new FormBody.Builder()
+                    .add("fromUserId", fromUserId)
+                    .build();
+            Request request = new Request.Builder()
+                    //.addHeader("Accept", "application/json")
+                    .url(url)
+                    .post(body)
+                    .build();
+            try {
+                Response response = client.newCall(request).execute();
+                App.log(TAG, "--------code--------->"+response.code());
+                if(response.code()==200){
+                    result = response.body().string();
+                }else {
+                    result = null;
+                }
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
+
+    /**打开红包*/
+    public static String httpPostUpdateRedPacket(Context context, String url, String moneyID){
+        String result = null;
+        if(isNetworkConnected(context)){
+            OkHttpClient client = new OkHttpClient();
+            RequestBody body = new FormBody.Builder()
+                    .add("moneyID", moneyID)
+                    .build();
+            Request request = new Request.Builder()
+                    //.addHeader("Accept", "application/json")
+                    .url(url)
+                    .post(body)
+                    .build();
+            try {
+                Response response = client.newCall(request).execute();
+                App.log(TAG, "--------code--------->"+response.code());
                 if(response.code()==200){
                     result = response.body().string();
                 }else {

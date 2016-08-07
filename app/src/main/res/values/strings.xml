@@ -5,6 +5,7 @@
     <string name="title_fragment_home">首页</string>
     <string name="title_fragment_friend">好友</string>
     <string name="title_fragment_me">我</string>
+    <string name="title_fragment_orders">我的充值记录</string>
 
     <string name="prompt_username">用户名</string>
     <string name="prompt_phone">手机</string>
@@ -33,6 +34,14 @@
     <string name="sales">销量:</string>
     <string name="btn_get_red_package">领红包</string>
     <string name="btn_my_change">我的钱包</string>
+    <string name="btn_my_msg">我的消息</string>
     <string name="btn_logout">登出</string>
     <string name="btn_back">返回</string>
+
+    <string name="tv_mymoney">我的钱包</string>
+    <string name="tv_money_type">¥</string>
+    <string name="tv_money_amount">_ _</string>
+    <string name="btn_in_money">充值</string>
+    <string name="btn_out_money">提现</string>
+    <string name="invalite_login">登录失效，请重新登录</string>
 </resources>

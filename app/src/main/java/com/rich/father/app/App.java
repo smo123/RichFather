@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.easemob.redpacketsdk.RedPacket;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
+import com.rich.father.models.Orders;
 import com.rich.father.models.Products;
 import com.rich.father.models.RequireResult;
 import com.rich.father.utils.HttpTool;
@@ -24,12 +25,15 @@ public class App extends Application{
     public static final String TAG = App.class.getName();
     public static final boolean DEBUG = true;//是否允许debug输出
 
-    public static final String BASE_URL = "http://feigou.ecs31.tomcats.pw/RichDad/";//正式环境
-    //public static final String BASE_URL = "http://192.168.1.102:8080/RichDad/";//测试环境
+    //public static final String BASE_URL = "http://feigou.ecs31.tomcats.pw/RichDad/";//正式环境
+    public static final String BASE_URL = "http://192.168.1.107:8080/RichDad/";//测试环境
 
     public static final String REGISTER = BASE_URL+"user/regist.do";
     public static final String LOGIN = BASE_URL+"user/login.do";
     public static final String GET_PRODUCTS = BASE_URL+"product/findAll.do";
+    public static final String IN_MONEY = BASE_URL+"product/saveOrders.do";
+    public static final String IN_MONEY_HISTORY = BASE_URL+"product/findOrders.do";
+    public static final String OPEN_RED_PACKET = BASE_URL+"product/updateOrders.do";
 
     public static final String SP_PACKAGE_USER = "user";
     public static final String SP_KEY_LOGIN_STATUS = "login_status";
@@ -39,8 +43,6 @@ public class App extends Application{
     public static final String SP_KEY_RED_PACKET_ID = "red_packet_id";
     public static final String SP_KEY_RED_PACKET_FROM_USER_ID = "red_packet_from_user_id";
     public static final String SP_KEY_RED_PACKET_RECEIVER_ID = "red_packet_receiver_id";
-    public static final String SP_KEY_RED_PACKET_TYPE = "red_packet_type";
-    public static final String SP_KEY_RED_PACKET_GREETING = "red_packet_greeting";
 
     //本方法保证在5.0以下的机器也能够运行，不要移除
     @Override
@@ -91,6 +93,39 @@ public class App extends Application{
             products = JsonParser.parserProducts(result);
         }
         return products;
+    }
+
+    //充值
+    public static Orders inMoney(Context context, String url, String fromUserId, String toUserId, String moneyAmount, String moneyID, String moneyMsgDirect, String takenMoney){
+        Orders orders = null;
+        String result = HttpTool.httpPostInMoney(context, url, fromUserId, toUserId, moneyAmount, moneyID, moneyMsgDirect, takenMoney);
+        App.log(TAG, "---------result-------->"+result);
+        if(result != null){
+            orders = JsonParser.parserOrders(result);
+        }
+        return orders;
+    }
+
+    //充值历史记录
+    public static Orders inMoneyHistory(Context context, String url, String fromUserId){
+        Orders orders = null;
+        String result = HttpTool.httpPostInMoneyHistory(context, url, fromUserId);
+        App.log(TAG, "------inMoneyHistory---result-------->"+result);
+        if(result != null){
+            orders = JsonParser.parserOrders(result);
+        }
+        return orders;
+    }
+
+    //领取红包后更新红包列表
+    public static Orders updateRedPacket(Context context, String url, String moneyID){
+        Orders orders = null;
+        String result = HttpTool.httpPostUpdateRedPacket(context, url, moneyID);
+        App.log(TAG, "------inMoneyHistory---result-------->"+result);
+        if(result != null){
+            orders = JsonParser.parserOrders(result);
+        }
+        return orders;
     }
 
     //把数据保存到SharedPreferences之中

@@ -2,6 +2,8 @@ package com.rich.father.ui;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
@@ -67,9 +69,22 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         }
     }
 
+    private static final int SHOW_PROGRESS_BAR = 1;
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what){
+                case SHOW_PROGRESS_BAR:
+                    LoadingDialog.showDialog(RegisterActivity.this);
+                    break;
+            }
+        }
+    };
+
     @Override
     public void onPreExecute() {
-        LoadingDialog.showDialog(RegisterActivity.this);
+        handler.sendEmptyMessage(SHOW_PROGRESS_BAR);
     }
 
     @Override
