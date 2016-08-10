@@ -160,7 +160,6 @@ public class ThirdFragment extends EaseChatFragment implements HttpAsyncTask.IHt
                 HttpAsyncTask.getInstance(ThirdFragment.this, REQUIRE_TYPE_BUY);
                 break;
             case R.id.btn_out_money:
-                HttpAsyncTask.getInstance(ThirdFragment.this, REQUIRE_TYPE_IN_MONEY, App.IN_MONEY, "18775769566", "22222", "10", "23224245", "Send", "10");
                 break;
             case R.id.btn_get_red_package:
                 String phone = App.getData4SP(activity, App.SP_PACKAGE_USER, App.SP_KEY_PHONE);

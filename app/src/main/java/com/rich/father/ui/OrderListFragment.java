@@ -59,7 +59,6 @@ public class OrderListFragment extends EaseChatFragment implements HttpAsyncTask
         super.onCreate(savedInstanceState);
         activity = getActivity();
         fragmentManager = activity.getSupportFragmentManager();//Fragment管理器
-
         if (getArguments() != null) {
             fromUserId = getArguments().getString(PARAM_FROM_USER_ID);
         }
@@ -128,7 +127,6 @@ public class OrderListFragment extends EaseChatFragment implements HttpAsyncTask
                     ordersArrayList = orders.getData();
                     orderAdapter = new OrderAdapter(activity, ordersArrayList);
                     listViewOrder.setAdapter(orderAdapter);
-                    App.log(TAG, "----------orders------->"+orders.getData());
                 }
                 break;
             case REQUIRE_TYPE_OPENT_RED_PACKET:

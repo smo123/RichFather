@@ -14,7 +14,8 @@ public class Order implements Serializable {
     private String moneyID;
     private String moneyMsgDirect;
     private String takenMoney;
-    private String date;
+    private String sysdate;
+    private String isOpen;
 
     public String getFromUserId() {
         return fromUserId;
@@ -64,11 +65,19 @@ public class Order implements Serializable {
         this.takenMoney = takenMoney;
     }
 
-    public String getDate() {
-        return date;
+    public String getSysdate() {
+        return sysdate;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setSysdate(String sysdate) {
+        this.sysdate = sysdate;
+    }
+
+    public String getIsOpen() {
+        return isOpen;
+    }
+
+    public void setIsOpen(String isOpen) {
+        this.isOpen = isOpen;
     }
 }

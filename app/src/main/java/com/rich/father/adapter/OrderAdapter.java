@@ -11,7 +11,10 @@ import com.rich.father.R;
 import com.rich.father.models.Order;
 import com.rich.father.widget.ViewHolder;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 
 /**
@@ -64,7 +67,14 @@ public class OrderAdapter extends BaseAdapter {
         if(order != null){
             tvUser.setText(order.getFromUserId());
             tvAmount.setText(order.getMoneyAmount());
-            tvTime.setText(order.getDate());
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            try {
+                Date date = format.parse(order.getSysdate());
+                String strDate = format.format(date);
+                tvTime.setText(strDate);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
         return convertView;
     }
