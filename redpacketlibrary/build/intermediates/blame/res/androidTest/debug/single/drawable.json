@@ -48,12 +48,12 @@
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\rp_sidebar_background.xml"
     },
     {
-        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rp_btn_open_normal_shape.xml",
-        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\rp_btn_open_normal_shape.xml"
-    },
-    {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rp_btn_normal_shape.xml",
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\rp_btn_normal_shape.xml"
+    },
+    {
+        "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rp_btn_open_normal_shape.xml",
+        "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\rp_btn_open_normal_shape.xml"
     },
     {
         "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rp_btn_blue_selector.xml",
@@ -88,12 +88,12 @@
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\em_red_packet_chatto_bg.xml"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rp_btn_open_selector.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\rp_btn_open_selector.xml"
-    },
-    {
         "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rp_btn_default_shape.xml",
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\rp_btn_default_shape.xml"
+    },
+    {
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rp_btn_open_selector.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\rp_btn_open_selector.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_timestampe_bg.xml",
@@ -120,12 +120,12 @@
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable\\rp_btn_grey_selector.xml"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_recording_text_hint_bg.xml",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\drawable\\ease_recording_text_hint_bg.xml"
-    },
-    {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_chatting_setmode_voice_btn.xml",
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\drawable\\ease_chatting_setmode_voice_btn.xml"
+    },
+    {
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\ease_recording_text_hint_bg.xml",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\exploded-aar\\RichFather\\easeui\\unspecified\\res\\drawable\\ease_recording_text_hint_bg.xml"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\rp_btn_open_pressed_shape.xml",

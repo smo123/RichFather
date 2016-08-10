@@ -5,6 +5,15 @@
 
     <RelativeLayout style="@style/topbar_layout_style">
 
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/btn_style"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/back" />
+
         <TextView
             android:id="@+id/tv_title"
             style="@style/topbar_text_style"

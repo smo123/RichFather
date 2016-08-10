@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.rich.father.R;
@@ -57,16 +56,15 @@ public class OrderAdapter extends BaseAdapter {
         }else{
             convertView = viewHashMap.get(position);
         }
-        ImageView ivProductIcon = ViewHolder.get(convertView, R.id.iv_product_icon);
-        TextView tvTitle = ViewHolder.get(convertView, R.id.tv_product_title);
-        TextView tvPrice = ViewHolder.get(convertView, R.id.tv_product_price);
-        TextView tvSales = ViewHolder.get(convertView, R.id.tv_product_sales);
+        TextView tvUser = ViewHolder.get(convertView, R.id.tv_in_money_user);
+        TextView tvAmount = ViewHolder.get(convertView, R.id.tv_in_money_amount);
+        TextView tvTime = ViewHolder.get(convertView, R.id.tv_in_money_time);
 
         final Order order = data.get(position);
         if(order != null){
-            tvTitle.setText(order.getFromUserId());
-            tvPrice.setText(order.getMoneyAmount());
-            tvSales.setText(order.getDate());
+            tvUser.setText(order.getFromUserId());
+            tvAmount.setText(order.getMoneyAmount());
+            tvTime.setText(order.getDate());
         }
         return convertView;
     }

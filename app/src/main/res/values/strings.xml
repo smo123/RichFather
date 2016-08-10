@@ -32,6 +32,9 @@
     <string name="register_fail">注册失败</string>
     <string name="price">¥:</string>
     <string name="sales">销量:</string>
+    <string name="in_money_user">用户:</string>
+    <string name="in_money_amount">金额:</string>
+    <string name="in_money_time">时间:</string>
     <string name="btn_get_red_package">领红包</string>
     <string name="btn_my_change">我的钱包</string>
     <string name="btn_my_msg">我的消息</string>

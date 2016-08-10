@@ -168,6 +168,7 @@ public class ThirdFragment extends EaseChatFragment implements HttpAsyncTask.IHt
                     OrderListFragment orderListFragment = OrderListFragment.newInstance(phone);
                     transaction = fragmentManager.beginTransaction();
                     transaction.replace(R.id.layout_main_content, orderListFragment);
+                    transaction.addToBackStack(null);
                     transaction.commit();
                 }else {
                     App.toast(activity, getResources().getString(R.string.invalite_login));

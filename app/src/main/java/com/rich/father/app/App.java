@@ -25,8 +25,8 @@ public class App extends Application{
     public static final String TAG = App.class.getName();
     public static final boolean DEBUG = true;//是否允许debug输出
 
-    //public static final String BASE_URL = "http://feigou.ecs31.tomcats.pw/RichDad/";//正式环境
-    public static final String BASE_URL = "http://192.168.1.107:8080/RichDad/";//测试环境
+    public static final String BASE_URL = "http://feigou.ecs31.tomcats.pw/RichDad/";//正式环境
+    //public static final String BASE_URL = "http://192.168.1.107:8080/RichDad/";//测试环境
 
     public static final String REGISTER = BASE_URL+"user/regist.do";
     public static final String LOGIN = BASE_URL+"user/login.do";

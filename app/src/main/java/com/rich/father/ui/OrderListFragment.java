@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.easemob.redpacketui.RedPacketConstant;
@@ -31,6 +32,7 @@ public class OrderListFragment extends EaseChatFragment implements HttpAsyncTask
     private static final int REQUIRE_TYPE_OPENT_RED_PACKET = 2;//购买
     private static final String PARAM_FROM_USER_ID = "fromUserId";
 
+    private Button btnBack;
     private ListView listViewOrder;
     private OrderAdapter orderAdapter;
 
@@ -68,6 +70,7 @@ public class OrderListFragment extends EaseChatFragment implements HttpAsyncTask
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_orders, container, false);
+        btnBack = (Button)v.findViewById(R.id.btn_back);
         listViewOrder = (ListView)v.findViewById(R.id.list_order);
         listViewOrder.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -80,6 +83,12 @@ public class OrderListFragment extends EaseChatFragment implements HttpAsyncTask
                 EMMessage message = EMMessage.createTxtSendMessage("领红包", red_packet_receiver_id);
                 message.setAttribute(RedPacketConstant.EXTRA_RED_PACKET_ID, red_packet_id);//订单号
                 RedPacketUtil.openRedPacket(activity, OrderListFragment.this, EaseConstant.CHATTYPE_SINGLE, message);
+            }
+        });
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragmentManager.popBackStack();
             }
         });
         return v;
