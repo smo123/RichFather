@@ -26,6 +26,15 @@
         <item name="android:background">@color/main_style_normal_color</item>
     </style>
 
+    //===============================顶部分割View=======================================
+    <style name="topbar_divider_view_style">
+        <item name="android:layout_width">0.05dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
     //===============================顶部标题=======================================
     <style name="topbar_text_style">
         <item name="android:layout_width">wrap_content</item>

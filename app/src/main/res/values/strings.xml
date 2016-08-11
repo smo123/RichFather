@@ -36,6 +36,7 @@
     <string name="in_money_amount">金额:</string>
     <string name="in_money_time">时间:</string>
     <string name="btn_get_red_package">领红包</string>
+    <string name="btn_get_red_package2">充值记录</string>
     <string name="btn_my_change">我的钱包</string>
     <string name="btn_my_msg">我的消息</string>
     <string name="btn_logout">登出</string>
@@ -47,4 +48,5 @@
     <string name="btn_in_money">充值</string>
     <string name="btn_out_money">提现</string>
     <string name="invalite_login">登录失效，请重新登录</string>
+    <string name="had_get_red_packet">红包已领取</string>
 </resources>

@@ -74,14 +74,20 @@ public class OrderListFragment extends EaseChatFragment implements HttpAsyncTask
         listViewOrder.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Order order = (Order)parent.getItemAtPosition(position);
-                //String red_packet_id = App.getData4SP(activity, App.SP_PACKAGE_REDPACKET, App.SP_KEY_RED_PACKET_ID);
-                //String red_packet_receiver_id = App.getData4SP(activity, App.SP_PACKAGE_REDPACKET, App.SP_KEY_RED_PACKET_RECEIVER_ID);
-                String red_packet_id = order.getMoneyID();
-                String red_packet_receiver_id = order.getToUserId();
-                EMMessage message = EMMessage.createTxtSendMessage("领红包", red_packet_receiver_id);
-                message.setAttribute(RedPacketConstant.EXTRA_RED_PACKET_ID, red_packet_id);//订单号
-                RedPacketUtil.openRedPacket(activity, OrderListFragment.this, EaseConstant.CHATTYPE_SINGLE, message);
+                String phone = App.getData4SP(activity, App.SP_PACKAGE_USER, App.SP_KEY_PHONE);
+                if(phone.equalsIgnoreCase("18775769566")){
+                    Order order = (Order)parent.getItemAtPosition(position);
+                    String isOpen = order.getIsOpen();
+                    if(isOpen == null||!isOpen.equalsIgnoreCase("1")){
+                        String red_packet_id = order.getMoneyID();
+                        String red_packet_receiver_id = order.getToUserId();
+                        EMMessage message = EMMessage.createTxtSendMessage("领红包", red_packet_receiver_id);
+                        message.setAttribute(RedPacketConstant.EXTRA_RED_PACKET_ID, red_packet_id);//订单号
+                        RedPacketUtil.openRedPacket(activity, OrderListFragment.this, EaseConstant.CHATTYPE_SINGLE, message);
+                    }else {
+                        App.toast(activity, getResources().getString(R.string.had_get_red_packet));
+                    }
+                }
             }
         });
         btnBack.setOnClickListener(new View.OnClickListener() {

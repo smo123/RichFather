@@ -91,13 +91,14 @@
         android:id="@+id/btn_my_change"
         style="@style/ucenter_btn_style"
         android:drawableLeft="@mipmap/wallet"
-        android:text="@string/btn_my_change" />
+        android:text="@string/btn_my_change"
+        android:visibility="gone"/>
 
     <Button
         android:id="@+id/btn_get_red_package"
         style="@style/ucenter_btn_style"
         android:drawableLeft="@mipmap/redpacket"
-        android:text="@string/btn_get_red_package" />
+        android:text="@string/btn_get_red_package2" />
 
     <Button
         android:id="@+id/btn_my_msg"

@@ -11,6 +11,10 @@
             style="@style/topbar_text_style"
             android:text="@string/title_activity_login" />
 
+        <View
+            style="@style/topbar_divider_view_style"
+            android:layout_toLeftOf="@+id/btn_register" />
+
         <Button
             android:id="@+id/btn_register"
             style="@style/btn_style"

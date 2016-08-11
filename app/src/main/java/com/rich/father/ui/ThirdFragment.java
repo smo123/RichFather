@@ -92,6 +92,12 @@ public class ThirdFragment extends EaseChatFragment implements HttpAsyncTask.IHt
         btnChange.setOnClickListener(this);
         btnLogout.setOnClickListener(this);
 
+        String phone = App.getData4SP(activity, App.SP_PACKAGE_USER, App.SP_KEY_PHONE);
+        if(phone != null&&phone.equalsIgnoreCase("18775769566")){
+            btnChange.setVisibility(View.VISIBLE);
+            btnGetRP.setText(getResources().getString(R.string.btn_get_red_package));
+        }
+
         return view;
     }
 

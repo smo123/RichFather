@@ -14,6 +14,10 @@
             android:layout_centerVertical="true"
             android:text="@string/back" />
 
+        <View
+            style="@style/topbar_divider_view_style"
+            android:layout_toRightOf="@+id/btn_back" />
+
         <TextView
             android:id="@+id/tv_title"
             style="@style/topbar_text_style"

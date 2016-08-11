@@ -1,11 +1,11 @@
 [
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_picture_frame_lack.png",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_picture_frame_lack.png"
-    },
-    {
         "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_closed_yellow_icon.png",
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_closed_yellow_icon.png"
+    },
+    {
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_picture_frame_lack.png",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_picture_frame_lack.png"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_jd_icon.png",
@@ -40,32 +40,32 @@
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_pop_bg.9.png"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_closed_yellow_icon.png",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_closed_yellow_icon.png"
-    },
-    {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\em_red_packet_ack_message_icon.png",
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\em_red_packet_ack_message_icon.png"
+    },
+    {
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_closed_yellow_icon.png",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_closed_yellow_icon.png"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_load_dark_9.png",
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_load_dark_9.png"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\em_chat_red_packet_normal.png",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\em_chat_red_packet_normal.png"
-    },
-    {
         "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_picture_right.png",
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_picture_right.png"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_exclusive_icon.png",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_exclusive_icon.png"
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\em_chat_red_packet_normal.png",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\em_chat_red_packet_normal.png"
     },
     {
         "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_add_card_icon.png",
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_add_card_icon.png"
+    },
+    {
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_exclusive_icon.png",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_exclusive_icon.png"
     },
     {
         "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_red_packet_records.png",
@@ -76,20 +76,20 @@
         "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_picture_flash_strong.png"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_bg_circular.png",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_bg_circular.png"
-    },
-    {
         "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\em_red_packet_chatto_bg_normal.9.png",
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\em_red_packet_chatto_bg_normal.9.png"
     },
     {
-        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_forget_pwd.png",
-        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_forget_pwd.png"
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_bg_circular.png",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_bg_circular.png"
     },
     {
         "merged": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_search_icon.png",
         "source": "D:\\smo\\github_repositories\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_search_icon.png"
+    },
+    {
+        "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_forget_pwd.png",
+        "source": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\res\\drawable-xxhdpi\\rp_forget_pwd.png"
     },
     {
         "merged": "D:\\Android\\workspace\\RichFather\\redpacketlibrary\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4\\rp_user.png",

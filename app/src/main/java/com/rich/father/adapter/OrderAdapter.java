@@ -65,6 +65,11 @@ public class OrderAdapter extends BaseAdapter {
 
         final Order order = data.get(position);
         if(order != null){
+            String isOpen = order.getIsOpen();
+            if(isOpen != null&&isOpen.equalsIgnoreCase("1")){
+            }else {
+                convertView.setBackgroundResource(R.drawable.btn_bg2);
+            }
             tvUser.setText(order.getFromUserId());
             tvAmount.setText(order.getMoneyAmount());
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
