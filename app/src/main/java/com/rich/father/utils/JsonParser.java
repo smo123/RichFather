@@ -2,6 +2,7 @@ package com.rich.father.utils;
 
 import com.google.gson.Gson;
 import com.rich.father.models.Orders;
+import com.rich.father.models.OutMoneys;
 import com.rich.father.models.Products;
 import com.rich.father.models.RequireResult;
 
@@ -34,6 +35,14 @@ public class JsonParser {
         Gson gson = new Gson();
         orders = gson.fromJson(jsonData, Orders.class);
         return orders;
+    }
+
+    //解析提现
+    public static OutMoneys parserOutMoneys(String jsonData){
+        OutMoneys outMoneys = null;
+        Gson gson = new Gson();
+        outMoneys = gson.fromJson(jsonData, OutMoneys.class);
+        return outMoneys;
     }
 
 }

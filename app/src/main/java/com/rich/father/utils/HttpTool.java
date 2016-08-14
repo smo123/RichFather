@@ -187,6 +187,63 @@ public class HttpTool {
         return result;
     }
 
+    /**提现*/
+    public static String httpPostOutMoney(Context context, String url, String phone, String amount){
+        String result = null;
+        if(isNetworkConnected(context)){
+            OkHttpClient client = new OkHttpClient();
+            RequestBody body = new FormBody.Builder()
+                    .add("w_phone", phone)
+                    .add("w_price", amount)
+                    .build();
+            Request request = new Request.Builder()
+                    //.addHeader("Accept", "application/json")
+                    .url(url)
+                    .post(body)
+                    .build();
+            try {
+                Response response = client.newCall(request).execute();
+                App.log(TAG, "--------code--------->"+response.code());
+                if(response.code()==200){
+                    result = response.body().string();
+                }else {
+                    result = null;
+                }
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
+
+    /**充值历史记录*/
+    public static String httpPostOutMoneyHistory(Context context, String url, String w_phone){
+        String result = null;
+        if(isNetworkConnected(context)){
+            OkHttpClient client = new OkHttpClient();
+            RequestBody body = new FormBody.Builder()
+                    .add("w_phone", w_phone)
+                    .build();
+            Request request = new Request.Builder()
+                    //.addHeader("Accept", "application/json")
+                    .url(url)
+                    .post(body)
+                    .build();
+            try {
+                Response response = client.newCall(request).execute();
+                App.log(TAG, "--------code--------->"+response.code());
+                if(response.code()==200){
+                    result = response.body().string();
+                }else {
+                    result = null;
+                }
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
+
     /**检查网络是否可用*/
     private static boolean isNetworkConnected(Context context) {
         boolean flag = false;

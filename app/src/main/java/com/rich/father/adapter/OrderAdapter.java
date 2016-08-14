@@ -75,7 +75,7 @@ public class OrderAdapter extends BaseAdapter {
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             try {
                 Date date = format.parse(order.getSysdate());
-                String strDate = format.format(date);
+                String strDate = format.format(order.getSysdate());
                 tvTime.setText(strDate);
             } catch (ParseException e) {
                 e.printStackTrace();

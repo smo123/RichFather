@@ -21,12 +21,12 @@
         <TextView
             android:id="@+id/tv_title"
             style="@style/topbar_text_style"
-            android:text="@string/title_fragment_out_money" />
+            android:text="@string/title_fragment_out_money_history" />
 
     </RelativeLayout>
 
     <ListView
-        android:id="@+id/list_order"
+        android:id="@+id/list_history"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/layout_action_bar" />

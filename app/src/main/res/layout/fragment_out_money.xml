@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/topbar_layout_style">
+
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/btn_style"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/back" />
+
+        <View
+            style="@style/topbar_divider_view_style"
+            android:layout_toRightOf="@+id/btn_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/topbar_text_style"
+            android:text="@string/title_fragment_out_money" />
+
+        <View
+            style="@style/topbar_divider_view_style"
+            android:layout_toLeftOf="@+id/btn_history" />
+
+        <Button
+            android:id="@+id/btn_history"
+            style="@style/btn_style"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/action_out_money_history" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="@string/out_amount"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_max_out_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:text="@string/max_out_amount" />
+
+    <EditText
+        android:id="@+id/edit_amount"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        style="@style/btn_style"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/confirm" />
+
+</LinearLayout>

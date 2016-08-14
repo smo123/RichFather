@@ -12,6 +12,7 @@ import com.easemob.redpacketsdk.RedPacket;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
 import com.rich.father.models.Orders;
+import com.rich.father.models.OutMoneys;
 import com.rich.father.models.Products;
 import com.rich.father.models.RequireResult;
 import com.rich.father.utils.HttpTool;
@@ -34,6 +35,8 @@ public class App extends Application{
     public static final String IN_MONEY = BASE_URL+"product/saveOrders.do";
     public static final String IN_MONEY_HISTORY = BASE_URL+"product/findOrders.do";
     public static final String OPEN_RED_PACKET = BASE_URL+"product/updateOrders.do";
+    public static final String OUT_MONEY = BASE_URL+"product/saveWithdraw.do";
+    public static final String OUT_MONEY_HISTORY = BASE_URL+"product/findWithdraw.do";
 
     public static final String SP_PACKAGE_USER = "user";
     public static final String SP_KEY_LOGIN_STATUS = "login_status";
@@ -126,6 +129,28 @@ public class App extends Application{
             orders = JsonParser.parserOrders(result);
         }
         return orders;
+    }
+
+    //提现
+    public static OutMoneys outMoney(Context context, String url, String phone, String amount){
+        OutMoneys outMoneys = null;
+        String result = HttpTool.httpPostOutMoney(context, url, phone, amount);
+        App.log(TAG, "---------result-------->"+result);
+        if(result != null){
+            outMoneys = JsonParser.parserOutMoneys(result);
+        }
+        return outMoneys;
+    }
+
+    //提现历史
+    public static OutMoneys outMoneyHistory(Context context, String url, String phone){
+        OutMoneys outMoneys = null;
+        String result = HttpTool.httpPostOutMoneyHistory(context, url, phone);
+        App.log(TAG, "---------result-------->"+result);
+        if(result != null){
+            outMoneys = JsonParser.parserOutMoneys(result);
+        }
+        return outMoneys;
     }
 
     //把数据保存到SharedPreferences之中

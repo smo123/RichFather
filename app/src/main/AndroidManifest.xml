@@ -42,7 +42,9 @@
             android:name="com.hyphenate.chat.EMChatService"
             android:exported="true" />
 
-        <activity android:name=".ui.MainActivity">
+        <activity
+            android:name=".ui.MainActivity"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

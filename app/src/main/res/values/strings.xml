@@ -5,7 +5,9 @@
     <string name="title_fragment_home">首页</string>
     <string name="title_fragment_friend">好友</string>
     <string name="title_fragment_me">我</string>
-    <string name="title_fragment_orders">我的充值记录</string>
+    <string name="title_fragment_orders">充值记录</string>
+    <string name="title_fragment_out_money">申请提现</string>
+    <string name="title_fragment_out_money_history">提现历史</string>
 
     <string name="prompt_username">用户名</string>
     <string name="prompt_phone">手机</string>
@@ -16,6 +18,7 @@
     <string name="prompt_invite_code">验证码</string>
     <string name="action_sign_in">登陆</string>
     <string name="action_register">注册</string>
+    <string name="action_out_money_history">历史</string>
 
     <string name="menu_home">首页</string>
     <string name="menu_friend">好友</string>
@@ -49,4 +52,8 @@
     <string name="btn_out_money">提现</string>
     <string name="invalite_login">登录失效，请重新登录</string>
     <string name="had_get_red_packet">红包已领取</string>
+
+    <string name="out_amount">请输入提现金额</string>
+    <string name="max_out_amount">最大提现金额324.50元</string>
+    <string name="confirm">确定</string>
 </resources>
