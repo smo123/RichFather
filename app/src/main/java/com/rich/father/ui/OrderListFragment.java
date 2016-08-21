@@ -28,8 +28,9 @@ import java.util.ArrayList;
 
 public class OrderListFragment extends EaseChatFragment implements HttpAsyncTask.IHttpAsyncTask, RedPacketUtil.IOpenRedPacket {
 
-    private static final int REQUIRE_TYPE_IN_MONEY_HISTORY = 1;//购买
-    private static final int REQUIRE_TYPE_OPENT_RED_PACKET = 2;//购买
+    public static final String TAG = OrderListFragment.class.getName();
+    private static final int REQUIRE_TYPE_IN_MONEY_HISTORY = 1;
+    private static final int REQUIRE_TYPE_OPENT_RED_PACKET = 2;
     private static final String PARAM_FROM_USER_ID = "fromUserId";
 
     private Button btnBack;

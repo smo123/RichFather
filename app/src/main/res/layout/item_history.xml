@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/price_and_sales_title_text_style"
+            android:text="@string/out_money_amount" />
+
+        <TextView
+            android:id="@+id/tv_out_money_amount"
+            style="@style/price_and_sales_text_style"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp">
+
+        <LinearLayout
+            android:id="@+id/layout_in_money_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/price_and_sales_title_text_style"
+                android:text="@string/out_money_apply_time" />
+
+            <TextView
+                android:id="@+id/tv_out_money_apply_time"
+                style="@style/price_and_sales_text_style"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/layout_in_money_amount"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/price_and_sales_title_text_style"
+                android:text="@string/out_money_success_time" />
+
+            <TextView
+                android:id="@+id/tv_out_money_success_time"
+                style="@style/price_and_sales_text_style"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/layout_in_money_amount"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/price_and_sales_title_text_style"
+            android:text="@string/out_money_status" />
+
+        <TextView
+            android:id="@+id/tv_out_money_status"
+            style="@style/price_and_sales_text_style"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,7 +1,5 @@
 package com.rich.father.models;
 
-import java.util.Date;
-
 /**
  * Created by jinba on 2016/8/14.
  */
@@ -10,7 +8,7 @@ public class OutMoney {
     private String w_id;
     private String w_price;
     private String w_uid;
-    private Date w_data;
+    private String w_data;
     private String w_sdata;
     private String foase;
     private String w_weixin;
@@ -42,11 +40,11 @@ public class OutMoney {
         this.w_uid = wUid;
     }
 
-    public Date getW_data() {
+    public String getW_data() {
         return this.w_data;
     }
 
-    public void setW_data(Date wData) {
+    public void setW_data(String wData) {
         this.w_data = wData;
     }
 

@@ -38,6 +38,10 @@
     <string name="in_money_user">用户:</string>
     <string name="in_money_amount">金额:</string>
     <string name="in_money_time">时间:</string>
+    <string name="out_money_amount">金额:</string>
+    <string name="out_money_apply_time">申请时间:</string>
+    <string name="out_money_success_time">处理时间:</string>
+    <string name="out_money_status">状态:</string>
     <string name="btn_get_red_package">领红包</string>
     <string name="btn_get_red_package2">充值记录</string>
     <string name="btn_my_change">我的钱包</string>

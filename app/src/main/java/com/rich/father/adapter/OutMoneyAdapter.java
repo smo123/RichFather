@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.rich.father.R;
-import com.rich.father.models.Order;
+import com.rich.father.models.OutMoney;
 import com.rich.father.widget.ViewHolder;
 
 import java.text.ParseException;
@@ -20,16 +20,16 @@ import java.util.HashMap;
 /**
  * Created by jinba on 2016/7/31.
  */
-public class OrderAdapter extends BaseAdapter {
+public class OutMoneyAdapter extends BaseAdapter {
 
-    private static final String TAG = OrderAdapter.class.getName();
+    private static final String TAG = OutMoneyAdapter.class.getName();
 
     HashMap<Integer,View> viewHashMap = new HashMap<>();
     private Context context;
     private LayoutInflater inflater;
-    private ArrayList<Order> data;
+    private ArrayList<OutMoney> data;
 
-    public OrderAdapter(Context context, ArrayList<Order> data) {
+    public OutMoneyAdapter(Context context, ArrayList<OutMoney> data) {
         super();
         this.context = context;
         inflater = LayoutInflater.from(context);
@@ -54,29 +54,32 @@ public class OrderAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if(viewHashMap.get(position)==null){
-            convertView = inflater.inflate(R.layout.item_order, parent, false);
+            convertView = inflater.inflate(R.layout.item_history, parent, false);
             viewHashMap.put(position, convertView);
         }else{
             convertView = viewHashMap.get(position);
         }
-        TextView tvUser = ViewHolder.get(convertView, R.id.tv_in_money_user);
-        TextView tvAmount = ViewHolder.get(convertView, R.id.tv_in_money_amount);
-        TextView tvTime = ViewHolder.get(convertView, R.id.tv_in_money_time);
+        TextView tvAmount = ViewHolder.get(convertView, R.id.tv_out_money_amount);
+        TextView tvApplyTime = ViewHolder.get(convertView, R.id.tv_out_money_apply_time);
+        TextView tvSuccessTime = ViewHolder.get(convertView, R.id.tv_out_money_success_time);
+        TextView tvStatus = ViewHolder.get(convertView, R.id.tv_out_money_status);
 
-        final Order order = data.get(position);
-        if(order != null){
-            String isOpen = order.getIsOpen();
+        final OutMoney outMoney = data.get(position);
+        if(outMoney != null){
+            String isOpen = outMoney.getFoase();
             if(isOpen != null&&isOpen.equalsIgnoreCase("1")){
             }else {
                 convertView.setBackgroundResource(R.drawable.btn_bg2);
             }
-            tvUser.setText(order.getFromUserId());
-            tvAmount.setText(order.getMoneyAmount());
+            tvAmount.setText(outMoney.getW_price());
+            tvApplyTime.setText(outMoney.getW_data());
+            tvSuccessTime.setText(outMoney.getW_sdata());
+            //tvStatus.setText(outMoney.get);
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             try {
-                Date date = format.parse(order.getSysdate());
+                Date date = format.parse(outMoney.getW_sdata());
                 String strDate = format.format(date);
-                tvTime.setText(strDate);
+                tvSuccessTime.setText(strDate);
             } catch (ParseException e) {
                 e.printStackTrace();
             }
